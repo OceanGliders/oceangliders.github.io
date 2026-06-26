@@ -25,14 +25,16 @@ import openCalls from '../data/open-calls.json';
         <div class="bg-ocean-secondary rounded-xl p-6 text-white flex flex-col">
           <p class="text-xs font-semibold uppercase tracking-widest text-white/70 mb-2">Open Call</p>
           <h3 class="text-xl font-semibold mb-3">{call.title}</h3>
-          <p class="text-white/80 text-sm leading-relaxed mb-4">{call.description}</p>
+          {call.description.split('\n\n').map(para => (
+            <p class="text-white/80 text-base leading-relaxed mb-4">{para}</p>
+          ))}
 
           {call.diversity && (
-            <p class="text-white/80 text-sm leading-relaxed mb-4">{call.diversity}</p>
+            <p class="text-white/80 text-base leading-relaxed mb-4">{call.diversity}</p>
           )}
 
           {call.contacts && (
-            <p class="text-white/70 text-sm mb-5">
+            <p class="text-white/70 text-base mb-5">
               Questions? Contact{' '}
               {call.contacts.map((c, i) => (
                 <>
@@ -43,27 +45,9 @@ import openCalls from '../data/open-calls.json';
             </p>
           )}
 
-          {call.newTeams && (
-            <p class="text-white/80 text-sm leading-relaxed mb-2">
-              <span class="font-semibold text-white">{call.newTeams.label}:</span>{' '}
-              {call.newTeams.instruction}{' '}
-              <a href={`mailto:${call.newTeams.email}`} class="underline hover:text-white">{call.newTeams.email}</a>{' '}
-              by <span class="font-semibold text-white">{call.deadline}</span>.
-            </p>
-          )}
-
-          {call.existingTeams && (
-            <p class="text-white/80 text-sm leading-relaxed mb-5">
-              <span class="font-semibold text-white">{call.existingTeams.label}:</span>{' '}
-              {call.existingTeams.instruction.replace('the deadline above', call.deadline)}
-            </p>
-          )}
-
-          {!call.newTeams && (
-            <p class="text-white/70 text-sm mb-5">
-              Applications close <span class="font-semibold text-white">{call.deadline}</span>.
-            </p>
-          )}
+          <p class="text-white/70 text-base mb-5">
+            Applications close <span class="font-semibold text-white">{call.deadline}</span>.
+          </p>
 
           <div class="mt-auto pt-4">
           <a

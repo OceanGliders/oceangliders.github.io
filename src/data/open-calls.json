@@ -1,9 +1,9 @@
 [
   {
-    "title": "Call for OceanGliders Steering Team",
+    "title": "Call for New OceanGliders Steering Team Members",
     "deadline": "31 July 2026",
-    "description": "The OceanGliders Steering Team (OGST) provides scientific leadership for OceanGliders and liaises with other parts of GOOS. The call for applications is now open — new appointments will take effect in Fall 2026.",
-    "diversity": "OceanGliders encourages applications from researchers in South and East Asia, Africa, and South America, early career scientists (within 10 years of their most recent degree), and candidates who can help expand the representativeness and diversity of the Steering Team.",
+    "description": "Want to help shape the future of global ocean glider observations? The OceanGliders Steering Team provides scientific leadership for the programme and connects it to the wider GOOS ecosystem. We're looking for new members to bring fresh perspectives, regional expertise, and scientific vision — new appointments will take effect in Fall 2026.",
+    "diversity": "We especially welcome applications from researchers in South and East Asia, Africa, and South America, from early career scientists (within 10 years of their most recent degree), and from anyone who can help broaden the representativeness and diversity of the team.",
     "contacts": [
       { "name": "Filipa Carvalho", "email": "filipa.carvalho@noc.ac.uk" },
       { "name": "Robert Todd", "email": "rtodd@whoi.edu" }
@@ -12,19 +12,14 @@
     "buttonUrl": "https://forms.gle/9K3TNWGvms1FYvti9"
   },
   {
-    "title": "Call for Task Teams",
+    "title": "Call for New and Existing Task Teams",
     "deadline": "31 July 2026",
-    "description": "OceanGliders Task Teams drive focused activity on specific scientific and technical topics — from climate and carbon to ocean health, circulation, events, and prediction — connecting glider operators, scientists, manufacturers, and stakeholders across the international community.\n\nProposals for new Task Teams and reports from existing ones are welcome.",
-    "newTeams": {
-      "label": "New Task Teams",
-      "instruction": "Submit a short abstract (1–2 pages) to",
-      "email": "mcaracciolo@wmo.int"
-    },
-    "existingTeams": {
-      "label": "Existing Task Teams",
-      "instruction": "Submit your annual report and membership update by the deadline above."
-    },
-    "buttonText": "Submit a Task Team Application",
+    "description": "OceanGliders Task Teams bring people together around a shared focus — whether that's science, applications, or community best practices. Science themes like climate, carbon, ocean health, circulation, and extreme events are natural starting points, but teams can also tackle data standards, sensor technology, regional coordination, or any topic the community should be working on together.\n\nBefore applying, check the Task Teams page to see if your idea already aligns with an existing team — if so, reach out to the leads directly. Both new proposals and updates from existing Task Teams are submitted through the same form.",
+    "contacts": [
+      { "name": "Filipa Carvalho", "email": "filipa.carvalho@noc.ac.uk" },
+      { "name": "Robert Todd", "email": "rtodd@whoi.edu" }
+    ],
+    "buttonText": "Open the Submission Form",
     "buttonUrl": "https://forms.gle/hJ7bWEb4UQ7rUpJA9"
   }
 ]
