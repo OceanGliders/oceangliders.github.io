@@ -1,0 +1,35 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Section from '@/components/Section.astro';
+import platformCapabilities from '../../data/platform-capabilities.json';
+---
+<Layout title="Gliders" description="Underwater glider platforms and their observing capabilities.">
+  <div class="bg-ocean-primary text-white">
+    <div class="max-w-6xl mx-auto px-6 py-24">
+      <p class="section-subheading text-ocean-secondary">About</p>
+      <h1 class="text-4xl md:text-5xl font-semibold mb-4 leading-tight">Gliders</h1>
+      <p class="text-white/70 text-lg max-w-xl leading-relaxed">What gliders can do, and why they complement other GOOS platforms.</p>
+    </div>
+  </div>
+  <Section>
+    <p class="text-ocean-primary/60 mb-8 leading-relaxed">
+      Underwater gliders are small, buoyancy-driven autonomous platforms that profile the water column over deployments
+      lasting weeks to months, measuring physical, biogeochemical, and acoustic Essential Ocean Variables (EOVs).
+      Unlike propeller-driven vehicles, gliders use controlled changes in buoyancy for vertical motion, converting
+      that into forward propulsion through fixed wings. This makes them highly energy-efficient, enabling deployments of
+      weeks to months over ranges of hundreds to thousands of kilometres. Gliders surface periodically to transmit data
+      and receive instructions via satellite, enabling real-time data delivery and adaptive mission control from shore.
+    </p>
+    <p class="text-ocean-primary/60 mb-12 leading-relaxed">
+      Gliders provide observing capabilities that complement those of other GOOS platforms:
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {platformCapabilities.map(cap => (
+        <div class="bg-white rounded-xl shadow-md border border-ocean-light/30 p-6 hover:shadow-lg transition-shadow duration-200">
+          <h3 class="text-ocean-primary font-semibold mb-2">{cap.title}</h3>
+          <p class="text-ocean-primary/60 text-sm leading-relaxed">{cap.description}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+</Layout>

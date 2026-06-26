@@ -1,0 +1,108 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Section from '@/components/Section.astro';
+---
+<Layout title="Past, Present & Future" description="The past, present and future of OceanGliders, from concept to global observing network.">
+  <div class="bg-ocean-primary text-white">
+    <div class="max-w-6xl mx-auto px-6 py-24">
+      <p class="section-subheading text-ocean-secondary">About</p>
+      <h1 class="text-4xl md:text-5xl font-semibold mb-4 leading-tight">The Past, Present and Future of OceanGliders</h1>
+    </div>
+  </div>
+  <Section>
+    <div class="relative mb-20">
+      <!-- Vertical line -->
+      <div class="absolute left-[0.6875rem] top-2 bottom-2 w-px bg-ocean-secondary/25"></div>
+
+      <!-- 1989 -->
+      <div id="history-1989" class="relative flex gap-8 pb-12 scroll-mt-24">
+        <div class="flex-shrink-0 w-[1.375rem] pt-1.5">
+          <div class="w-[1.375rem] h-[1.375rem] rounded-full bg-ocean-secondary z-10 relative ring-4 ring-ocean-surface"></div>
+        </div>
+        <div>
+          <p class="text-ocean-secondary text-xs font-semibold uppercase tracking-widest mb-2">1989</p>
+          <p class="text-ocean-primary/70 leading-relaxed">
+            <strong class="text-ocean-primary">The concept came before the technology.</strong> The concept of
+            autonomous underwater gliders for sustained ocean observation was first articulated by Henry Stommel
+            in 1989. In a visionary essay titled "The Slocum Mission", Stommel imagined a global fleet of 1,000
+            gliders monitoring the ocean from a dedicated mission control centre, technology that did not yet exist.
+            The Slocum glider was subsequently developed by engineer Doug Webb and named after the essay. Through
+            the 1990s and early 2000s, the first operational gliders were demonstrated, and the concept Stommel
+            had imagined began to take shape.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2000s -->
+      <div id="history-2000s" class="relative flex gap-8 pb-12 scroll-mt-24">
+        <div class="flex-shrink-0 w-[1.375rem] pt-1.5">
+          <div class="w-[1.375rem] h-[1.375rem] rounded-full bg-ocean-secondary z-10 relative ring-4 ring-ocean-surface"></div>
+        </div>
+        <div>
+          <p class="text-ocean-secondary text-xs font-semibold uppercase tracking-widest mb-2">2000s</p>
+          <p class="text-ocean-primary/70 leading-relaxed">
+            <strong class="text-ocean-primary">Individual efforts, a common direction.</strong> At OceanObs'99,
+            glider technology was promising but not yet mature enough for large-scale sustained observing. Through
+            the 2000s, regional programmes expanded (primarily in the United States, Europe, and Australia),
+            building operational experience and developing the data management infrastructure needed to move from
+            individual deployments to coordinated networks. The European Gliding Observatories (EGO) workshop in
+            2005 marked the beginning of formal community coordination, followed by a series of annual symposia
+            that established shared best practices, common data standards, and the international relationships
+            that underpin the network today.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2009 -->
+      <div id="history-2009" class="relative flex gap-8 pb-12 scroll-mt-24">
+        <div class="flex-shrink-0 w-[1.375rem] pt-1.5">
+          <div class="w-[1.375rem] h-[1.375rem] rounded-full bg-ocean-secondary z-10 relative ring-4 ring-ocean-surface"></div>
+        </div>
+        <div>
+          <p class="text-ocean-secondary text-xs font-semibold uppercase tracking-widest mb-2">2009</p>
+          <p class="text-ocean-primary/70 leading-relaxed">
+            <strong class="text-ocean-primary">Technology matures, community grows.</strong> By OceanObs'09,
+            glider technology was maturing and the community had grown substantially, with experienced operators
+            regularly completing deployments of weeks to months over thousands of kilometres and mission success
+            rates approaching 90%.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2016 -->
+      <div id="history-2016" class="relative flex gap-8 pb-12 scroll-mt-24">
+        <div class="flex-shrink-0 w-[1.375rem] pt-1.5">
+          <div class="w-[1.375rem] h-[1.375rem] rounded-full bg-ocean-secondary z-10 relative ring-4 ring-ocean-surface"></div>
+        </div>
+        <div>
+          <p class="text-ocean-secondary text-xs font-semibold uppercase tracking-widest mb-2">2016</p>
+          <p class="text-ocean-primary/70 leading-relaxed">
+            <strong class="text-ocean-primary">Formal recognition within GOOS.</strong> OceanGliders was formally
+            established in September 2016 to coordinate and enhance global glider activity, bringing this
+            distributed community under a shared framework. In October 2017, OceanGliders received approval from
+            the Joint WMO-IOC Technical Commission for Oceanography and Marine Meteorology (JCOMM) as a formal
+            component of the Global Ocean Observing System (GOOS). By OceanObs'19, glider technology was
+            considered operationally mature, with an estimated fleet of over 500 active instruments deployed by
+            institutions across the USA, Europe, China, Australia, Canada, and beyond.
+          </p>
+        </div>
+      </div>
+
+      <!-- Now -->
+      <div id="history-now" class="relative flex gap-8 scroll-mt-24">
+        <div class="flex-shrink-0 w-[1.375rem] pt-1.5">
+          <div class="w-[1.375rem] h-[1.375rem] rounded-full bg-ocean-secondary z-10 relative ring-4 ring-ocean-surface"></div>
+        </div>
+        <div>
+          <p class="text-ocean-secondary text-xs font-semibold uppercase tracking-widest mb-2">Now</p>
+          <p class="text-ocean-primary/70 leading-relaxed">
+            <strong class="text-ocean-primary">From community to network.</strong> OceanGliders is in transition.
+            Having demonstrated what a coordinated community of glider operators can achieve, the programme is now
+            actively building the structures that turn that community into a sustained observing network: designed
+            coverage, accountable data delivery, and systematic integration into GOOS. This is the work happening today.
+          </p>
+        </div>
+      </div>
+    </div>
+  </Section>
+</Layout>
