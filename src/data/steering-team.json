@@ -104,7 +104,7 @@
     "imageUrl": "",
     "imagePosition": "center 25%",
     "bio": "Chari is a professor at the University of Western Australia and leads the glider-based component of the Integrated Marine Observing System (IMOS), Austrailia's national ocean observing system."
-  }
+  },
   {
     "name": "Elisabeth Remy",
     "role": "OceanGliders Steering Team member",
@@ -133,5 +133,5 @@
     "imageUrl": "/images/steering-team/PierreTestor.JPG",
     "imagePosition": "center 25%",
     "bio": "Pierre Testor is a French physical oceanographer specializing in ocean currents, marine ecosystems, and global environmental change. He has led numerous sea expeditions, collecting and analyzing oceanographic data. He is a pioneer in the use of underwater gliders for ocean observation. He works at CNRS and contributes to research, publications, and doctoral supervision."
-  },
+  }
 ]
