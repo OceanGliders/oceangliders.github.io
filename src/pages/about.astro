@@ -3,136 +3,10 @@ import Layout from '@/layouts/Layout.astro';
 import Section from '@/components/Section.astro';
 import FlexibleGrid from '@/components/FlexibleGrid.astro';
 import TeamCard from '@/components/TeamCard.astro';
-
-const steeringTeam = [
-  {
-    name: 'Robert Todd',
-    role: 'OceanGliders Co-Chair',
-    institution: 'Woods Hole Oceanographic Institution',
-    country: 'United States',
-    email: 'rtodd@whoi.edu',
-    imageUrl: '/images/steering-team/RobertTodd.jpg',
-    imagePosition: 'center 25%',
-    bio: 'Robert is a physical oceanographer at the Woods Hole Oceanographic Institution (WHOI). His research focuses on boundary current systems and upper ocean processes. Since 2015, he has led efforts to routinely sample the Gulf Stream along the US East Coast using gliders. He has long used small Doppler current profilers on gliders to measure depth-resolved ocean currents alongside other physical and biogeochemical properties. Robert has been involved with OceanGliders since 2016, having joined the Steering Team in 2022 and serving as co-Chair since 2025.'
-  },
-  {
-    name: 'Filipa Carvalho',
-    role: 'OceanGliders Co-Chair',
-    institution: 'National Oceanography Centre',
-    country: 'United Kingdom',
-    email: 'filipa.carvalho@noc.ac.uk',
-    imageUrl: '/images/steering-team/filipa.JPG',
-    bio: 'Filipa is a biological oceanographer and marine biogeochemist at the National Oceanography Centre (UK), studying biophysical interactions and the biological carbon pump using underwater gliders and other autonomous platforms. Her work focuses on how water column dynamics influence phytoplankton and carbon export, particularly in polar regions. She is an active member of the OceanGliders programme and, since November 2024, Chief Scientist for the Marine Autonomy Robotics Systems (MARS) group, fostering links between marine science and technology.',
-  },
-  {
-    name: 'Mariarita Caracciolo',
-    role: 'OceanGliders Technical Coordinator',
-    institution: 'ENSTA/OceanOPS-WMO',
-    country: 'France',
-    email: 'mcaracciolo@wmo.int',
-    imageUrl: '/images/steering-team/mariarita.jpg',
-    bio: 'Technical Coordinator of the Ocean Gliders, where she supports global coordination through real-time tracking, data management, reporting services, and the development of IT tools for underwater glider operations. She is also Coordinator of the European Glider Community (EGC), facilitating collaboration between scientists, engineers, operators, and policymakers through workshops and webinars. With a background in marine ecology and data science, she combines research coordination with strong expertise in science communication and outreach.',
-  },
-  {
-    name: 'Callum Rollo',
-    role: 'OceanGliders Data Team Lead',
-    institution: 'Voice of the Ocean Foundation',
-    country: 'Sweden',
-    email: 'callum.rollo@voiceoftheocean.org',
-    imageUrl: '/images/steering-team/CallumRollo.JPG',
-    imagePosition: 'center 25%',
-    bio: 'Callum is responsible for data flow, processing, and quality at Voice of the Ocean Foundation. He has 8 years of experience in the European glider community, working on standards like the OceanGliders data format and increasing the usage of common standards and controlled vocabularies. He has contributed to community owned open-source tools for glider data processing and dissemination, including pyglider, glidertest, and erddapy.',
-  },
-  {
-    name: 'Emma Gardner',
-    role: 'OceanGliders Data Team lead',
-    institution: 'NOC',
-    country: 'UK',
-    email: 'emmer@noc.ac.uk',
-    imageUrl: '/images/steering-team/EmmaGardner.JPG',
-    imagePosition: 'center 25%',
-    bio: 'Emma has over 8 years of experience within the European glider community and is the head of Autonomous Platform data management at NOC. She first joined the European glider data task team in 2018 before it evolved into the current OceanGliders data team. I have been lead of the OceanGliders data team since 2024 in support of a global standard for glider data. My aim is to support the uptake of the OceanGliders data format and promote data management best practices.' 
-},
-  {
-    name: 'Ilker Fer',
-    role: 'OceanGliders Steering Team member',
-    institution: 'University of Bergen',
-    country: 'Norway',
-    email: 'ilker.fer@uib.no',
-    imageUrl: '/images/steering-team/IlkerFer.jpg',
-    imagePosition: 'center 25%',
-    bio: 'Professor of physical oceanography at the Geophysical Institute, University of Bergen. He leads the Norwegian node for the European Multidisciplinary Seafloor and water column Observatory (NorEMSO) and the Norwegian National Facility for Ocean Gliders (NorGliders). His research covers ocean processes from meso- to small scales, with focus on ocean mixing and turbulence.',
-  },
-  {
-    name: 'Elisabeth Remy',
-    role: 'OceanGliders Steering Team member',
-    institution: 'Mercator Ocean International',
-    country: 'France',
-    email: 'eremy@mercator-ocean.fr',
-    imageUrl: '/images/steering-team/elisabeth.jpg',
-    bio: 'Head of the "Physical Ocean" unit within the R&D department at Mercator Ocean International, with expertise in global ocean data assimilation, coordination of European projects and collaborations with space agencies on the impact of observations. Member of the OceanPredict Science team.',
-  },
-  {
-    name: 'Pierre Cauchy',
-    role: 'OceanGliders Steering Team member',
-    institution: 'UQAR-ISMER',
-    country: 'Canada',
-    email: 'pierre_cauchy@uqar.ca',
-    imageUrl: '/images/steering-team/PierreCauchy.JPG',
-    imagePosition: 'center 25%',
-    bio: 'Involved in the development of Passive Acoustic Monitoring (PAM) applications on gliders since 2012, and co-scientific director of the Marine Acoustics Research Station (MARS). Interested in the multidisciplinary observation of anthropogenic and climatic pressures on the marine environment through monitoring of Ocean Sound, and the integration of glider-borne observation into underwater noise management frameworks.',
-  },
-  {
-    name: 'Naomi Krauzig',
-    role: 'OceanGliders Polar mission Lead',
-    institution: 'GEOMAR Helmholtz Centre for Ocean Research Kiel',
-    country: 'Germany',
-    email: 'nkrauzig@geomar.de',
-    imageUrl: '/images/steering-team/Naomi.jpg',
-    bio: 'Early-Career Executive member of the OceanGliders Steering Committee. Her work spans scales from small-scale mixing and microstructure processes to large-scale circulation and ocean–atmosphere–ice interactions, with glider experience in polar regions and the Mediterranean Sea. She leads glider data processing within the Physical Oceanography department at GEOMAR.',
-  },
-  {
-    name: 'Louise Biddle',
-    role: 'OceanGliders Steering Team member',
-    institution: 'Voice of the Ocean Foundation',
-    country: 'Sweden',
-    email: 'louise.biddle@voiceoftheocean.org',
-    imageUrl: '/images/steering-team/LouiseBiddle.JPG',
-    imagePosition: 'center 25%',
-    bio: 'Louise Biddle is the Science Director at Voice of the Ocean (VOTO), where she leads scientific strategy and supports ocean observation, data management, and research infrastructure services. She has a research background in physical oceanography and glider-based observations, having conducted field studies on upper-ocean processes in polar regions and developed observational tools. With deep experience in ocean science and autonomous platforms, she works to advance ocean research, open data, and collaboration across scientific and operational communities.',
-  },
-  {
-    name: 'Ali Aydogdu',
-    role: 'OceanGliders Steering Team member',
-    institution: 'Euro-Mediterranean Centre on Climate Change (CMCC)',
-    country: 'Italy',
-    email: 'ali.aydogdu@cmcc.it',
-    imageUrl: '/images/steering-team/Ali_aydogdu.jpg',
-    bio: 'Physical oceanographer specializing in data assimilation for regional, coastal, and polar seas. He leads the regional ocean data assimilation research unit at CMCC and heads the physics component for the CMEMS Black Sea Marine Forecasting Centre.',
-  },
-  {
-    name: 'Pierre Testor',
-    role: 'OceanGliders Steering Team member',
-    institution: 'LOCEAN-IPSL, CNRS/UPMC',
-    country: 'France',
-    email: 'pierre.testor@locean.ipsl.fr',
-    imageUrl: '/images/steering-team/PierreTestor.JPG',
-    imagePosition: 'center 25%',
-    bio: 'Pierre Testor is a French physical oceanographer specializing in ocean currents, marine ecosystems, and global environmental change. He has led numerous sea expeditions, collecting and analyzing oceanographic data. He is a pioneer in the use of underwater gliders for ocean observation. He works at CNRS and contributes to research, publications, and doctoral supervision.',
-  },
-{
-    name: 'Jong-Jin Park',
-    role: 'OceanGliders Steering Team member',
-    institution: 'Kyungpook National University',
-    country: 'Republic of Korea',
-    email: 'jjpark@knu.ac.kr',
-    imageUrl: '/images/steering-team/JJPark.PNG',
-    imagePosition: 'center 25%',
-    bio: 'Chair of the Korean Argo Program and director of the Korea Autonomous Ocean observing System (KAOS). His team operates 15 Slocum gliders and has accumulated over 3,000 glider-days and ~77,000 km of autonomous observations. His research focuses on mesoscale-submesoscale ocean dynamics, near-inertial internal waves, and AI-based ocean state estimation.',
-  },
-];
-
-
+import steeringTeam from '../data/steering-team.json';
+import taskTeams from '../data/task-teams.json';
+import partnerships from '../data/partnerships.json';
+import dataManagement from '../data/data-management.json';
 ---
 
 <Layout
@@ -197,33 +71,18 @@ const steeringTeam = [
     <p class="text-ocean-secondary text-xs font-semibold uppercase tracking-widest mb-2">Open Data</p>
     <h2 class="text-3xl font-semibold text-white mb-4">Data Management</h2>
     <p class="text-white/60 max-w-2xl mb-12 leading-relaxed">
-      OceanGliders promotes open, accessible, and interoperable glider data that maximise scientific and societal value, 
-      aligned with FAIR principles and the Essential Ocean Variables (EOVs) framework of GOOS. 
-      Data standards, formats, quality control procedures, and best practices are developed through community consensus, 
+      OceanGliders promotes open, accessible, and interoperable glider data that maximise scientific and societal value,
+      aligned with FAIR principles and the Essential Ocean Variables (EOVs) framework of GOOS.
+      Data standards, formats, quality control procedures, and best practices are developed through community consensus,
       coordinated by the Ocean Glider Data Management Team (OGDMT) and maintained at the OceanGliders GitHub.
     </p>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="border border-white/10 rounded-xl p-6 hover:border-ocean-secondary/50 transition-colors duration-200">
-        <h3 class="text-white font-semibold mb-2">OG1.0 Data Format</h3>
-        <p class="text-white/60 text-sm leading-relaxed">
-          The OceanGliders format (OG1.0, released June 2024) provides a community standard for
-          glider data files, ensuring interoperability across platforms and institutions.
-        </p>
-      </div>
-      <div class="border border-white/10 rounded-xl p-6 hover:border-ocean-secondary/50 transition-colors duration-200">
-        <h3 class="text-white font-semibold mb-2">Standard Operating Procedures</h3>
-        <p class="text-white/60 text-sm leading-relaxed">
-          Community-reviewed SOPs cover key sensors including oxygen, salinity, nitrate,
-          chlorophyll, depth-average currents, ADCP, and vertical velocities.
-        </p>
-      </div>
-      <div class="border border-white/10 rounded-xl p-6 hover:border-ocean-secondary/50 transition-colors duration-200">
-        <h3 class="text-white font-semibold mb-2">Real-Time Data </h3>
-        <p class="text-white/60 text-sm leading-relaxed">
-          Data are transmitted via satellite in near real time (every few hours) and disseminated
-          through global databases for both operational and research communities.
-        </p>
-      </div>
+      {dataManagement.map(item => (
+        <div class="border border-white/10 rounded-xl p-6 hover:border-ocean-secondary/50 transition-colors duration-200">
+          <h3 class="text-white font-semibold mb-2">{item.title}</h3>
+          <p class="text-white/60 text-sm leading-relaxed">{item.description}</p>
+        </div>
+      ))}
     </div>
     <div class="mt-8">
       <a
@@ -239,13 +98,13 @@ const steeringTeam = [
       </a>
     </div>
     <div class="mt-12">
-    <p class="text-ocean-secondary text-xs font-semibold uppercase tracking-widest mb-2">MetaData</p>
-    <h2 class="text-3xl font-semibold text-white mb-4">OceanOPS technical coordination</h2>
-    <p class="text-white/60 max-w-2xl mb-12 leading-relaxed">
-      OceanOPS coordinates with OceanGliders, the operational centre for GOOS observing networks, 
-      which maintains the global registry of glider deployments, monitors network status in real time, 
-      and ensures glider data are accessible alongside observations from complementary GOOS networks.
-    </p>
+      <p class="text-ocean-secondary text-xs font-semibold uppercase tracking-widest mb-2">MetaData</p>
+      <h2 class="text-3xl font-semibold text-white mb-4">OceanOPS technical coordination</h2>
+      <p class="text-white/60 max-w-2xl mb-12 leading-relaxed">
+        OceanOPS coordinates with OceanGliders, the operational centre for GOOS observing networks,
+        which maintains the global registry of glider deployments, monitors network status in real time,
+        and ensures glider data are accessible alongside observations from complementary GOOS networks.
+      </p>
     </div>
     <div class="mt-5">
       <a
@@ -262,10 +121,6 @@ const steeringTeam = [
     </div>
   </Section>
 
-  
-
-
-
   <!-- Steering Team — light -->
   <Section>
     <p class="section-subheading">Governance</p>
@@ -281,79 +136,50 @@ const steeringTeam = [
     </FlexibleGrid>
   </Section>
 
-
-
-<!-- Task Teams — dark -->
+  <!-- Task Teams — dark -->
   <Section dark>
     <p class="text-ocean-secondary text-xs font-semibold uppercase tracking-widest mb-2">Governance</p>
     <h2 class="text-3xl font-semibold text-white mb-4">Task Teams (TT)</h2>
     <p class="text-white/60 max-w-2xl mb-12 leading-relaxed">
-      Task Teams address specific scientific themes and technical topics, drawing membership from 
-      the broader international community of glider operators, scientists, manufacturers, and stakeholders. 
+      Task Teams address specific scientific themes and technical topics, drawing membership from
+      the broader international community of glider operators, scientists, manufacturers, and stakeholders.
       Task Teams report regularly to the OGST and co-leads will be invited to integrate the OGST.
     </p>
     <p class="text-white/60 max-w-2xl mb-8 leading-relaxed">
-      Full governance details, including membership, responsibilities, and decision-making procedures, 
+      Full governance details, including membership, responsibilities, and decision-making procedures,
       are set out in the OGST Terms of Reference.
     </p>
     <p class="text-white/60 max-w-2xl mb-8 leading-relaxed">
-    Current task teams are under review. If interested in an existent TT, contact the current TT leader.
+      Current task teams are under review. If interested in an existent TT, contact the current TT leader.
     </p>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="border border-white/10 rounded-xl p-6 hover:border-ocean-secondary/50 transition-colors duration-200">
-        <h3 class="text-white font-semibold mb-2">Passive Acoustic Monitoring (PAM)</h3>
-        <p class="text-white/60 text-sm leading-relaxed">
-          The PAM TT is leaded by Pierre Cauchy. [...]
-        </p>
-      </div>
-      <div class="border border-white/10 rounded-xl p-6 hover:border-ocean-secondary/50 transition-colors duration-200">
-        <h3 class="text-white font-semibold mb-2">Data Assimilation (DA)</h3>
-        <p class="text-white/60 text-sm leading-relaxed">
-          The DA TT is leaded by Aly Aydogdu. [...] 
-        </p>
-      </div>
-      <div class="border border-white/10 rounded-xl p-6 hover:border-ocean-secondary/50 transition-colors duration-200">
-        <h3 class="text-white font-semibold mb-2">Extreme events (EE) </h3>
-        <p class="text-white/60 text-sm leading-relaxed">
-          The EE TT is leaded by Charitha Pattiaratchi. [...] 
-        </p>
-      </div>
+      {taskTeams.map(tt => (
+        <div class="border border-white/10 rounded-xl p-6 hover:border-ocean-secondary/50 transition-colors duration-200">
+          <h3 class="text-white font-semibold mb-2">{tt.name}</h3>
+          <p class="text-white/60 text-sm leading-relaxed">{tt.description}</p>
+        </div>
+      ))}
     </div>
   </Section>
 
-
-
-  <!-- Partnerships -->
+  <!-- Partnerships — light -->
   <Section>
     <p class="section-subheading">Institutional Partners</p>
     <h2 class="section-heading mb-4">Partnerships</h2>
     <p class="text-ocean-primary/60 max-w-2xl mb-12 leading-relaxed">
-      OceanGliders engages with community organisations and industry partners that support glider operations and network development. 
-      The Underwater Gliders User Group (UG2) and the European Glider Community (EGC) are regional community led groups connecting 
-      glider operators, scientists, and stakeholders, promoting knowledge exchange and coordination across national and regional programmes. 
-      Glider manufacturers and technology developers are also active partners, contributing to platform innovation, sensor development, 
+      OceanGliders engages with community organisations and industry partners that support glider operations and network development.
+      The Underwater Gliders User Group (UG2) and the European Glider Community (EGC) are regional community led groups connecting
+      glider operators, scientists, and stakeholders, promoting knowledge exchange and coordination across national and regional programmes.
+      Glider manufacturers and technology developers are also active partners, contributing to platform innovation, sensor development,
       and the long-term operational sustainability of the network.
     </p>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-white rounded-xl shadow-md border border-ocean-light/30 p-6 hover:shadow-lg transition-shadow duration-200">
-        <h3 class="text-ocean-primary font-semibold mb-2">EGC</h3>
-        <p class="text-ocean-primary/60 text-sm leading-relaxed">
-          Mapping glider deployers worldwide and providing tools, data maagement support and training opportunities for European glider operators.
-        </p>
-      </div>
-      <div class="bg-white rounded-xl shadow-md border border-ocean-light/30 p-6 hover:shadow-lg transition-shadow duration-200">
-        <h3 class="text-ocean-primary font-semibold mb-2">UG2</h3>
-        <p class="text-ocean-primary/60 text-sm leading-relaxed">
-          A community-based coalition aimed at bolstering scientific collaboration, information, and resource sharing for gliders.
-        </p>
-      </div>
-      <div class="bg-white rounded-xl shadow-md border border-ocean-light/30 p-6 hover:shadow-lg transition-shadow duration-200">
-        <h3 class="text-ocean-primary font-semibold mb-2">GOOS-OceanOPS/WMO</h3>
-        <p class="text-ocean-primary/60 text-sm leading-relaxed">
-          Monitoring and Supporting Global Ocean Observing Networks through coordination 
-          and development of IT tools for GOOS. World Meteorological Organization co-sponsors GOOS.
-        </p>
-      </div>
+      {partnerships.map(p => (
+        <div class="bg-white rounded-xl shadow-md border border-ocean-light/30 p-6 hover:shadow-lg transition-shadow duration-200">
+          <h3 class="text-ocean-primary font-semibold mb-2">{p.name}</h3>
+          <p class="text-ocean-primary/60 text-sm leading-relaxed">{p.description}</p>
+        </div>
+      ))}
     </div>
   </Section>
 </Layout>

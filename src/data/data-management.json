@@ -1,0 +1,14 @@
+[
+  {
+    "title": "OG1.0 Data Format",
+    "description": "The OceanGliders format (OG1.0, released June 2024) provides a community standard for glider data files, ensuring interoperability across platforms and institutions."
+  },
+  {
+    "title": "Standard Operating Procedures",
+    "description": "Community-reviewed SOPs cover key sensors including oxygen, salinity, nitrate, chlorophyll, depth-average currents, ADCP, and vertical velocities."
+  },
+  {
+    "title": "Real-Time Data",
+    "description": "Data are transmitted via satellite in near real time (every few hours) and disseminated through global databases for both operational and research communities."
+  }
+]

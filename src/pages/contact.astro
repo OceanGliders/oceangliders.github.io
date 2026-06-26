@@ -1,6 +1,8 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import Section from '@/components/Section.astro';
+import contactRoles from '../data/contact-roles.json';
+import openCalls from '../data/open-calls.json';
 ---
 
 <Layout
@@ -13,7 +15,7 @@ import Section from '@/components/Section.astro';
       <p class="section-subheading text-ocean-secondary">Get in Touch</p>
       <h1 class="text-4xl md:text-5xl font-semibold mb-4 leading-tight">Contact Us</h1>
       <p class="text-white/70 text-lg max-w-xl leading-relaxed">
-        Whether you're looking to join the network, share data, or ask a scientific question—we'd love to hear from you.
+        Whether you're looking to join the network, share data, or ask a scientific question — we'd love to hear from you.
       </p>
     </div>
   </div>
@@ -24,189 +26,128 @@ import Section from '@/components/Section.astro';
       <!-- Guidance text -->
       <div class="mb-10 space-y-3 text-ocean-primary/70 leading-relaxed">
         <p>
-          <span class="font-semibold text-ocean-primary">For questions about glider operations, data management, or technical coordination</span> — 
+          <span class="font-semibold text-ocean-primary">For questions about glider operations, data management, or technical coordination</span> —
           please contact the <span class="text-ocean-secondary font-medium">Technical Coordinator</span>.
         </p>
         <p>
-          <span class="font-semibold text-ocean-primary">For questions about data access, data formats, or interoperability</span> — 
+          <span class="font-semibold text-ocean-primary">For questions about data access, data formats, or interoperability</span> —
           please contact the <span class="text-ocean-secondary font-medium">Data Management Leads</span>.
         </p>
         <p>
-          <span class="font-semibold text-ocean-primary">For scientific collaboration, mission involvement, or steering group enquiries</span> — 
+          <span class="font-semibold text-ocean-primary">For scientific collaboration, mission involvement, or steering group enquiries</span> —
           please contact the <span class="text-ocean-secondary font-medium">Co-Chairs</span>.
         </p>
         <p>
-          <span class="font-semibold text-ocean-primary">For community resources, code, and best practices</span> — 
+          <span class="font-semibold text-ocean-primary">For community resources, code, and best practices</span> —
           visit the <span class="text-ocean-secondary font-medium">OceanGliders Community on GitHub</span>.
         </p>
       </div>
 
       <!-- Contact cards -->
       <div class="space-y-4">
-
-        <!-- Co-Chairs -->
-        <div class="bg-white rounded-xl shadow-md border border-ocean-light/30 p-5 flex gap-4 items-start">
-          <div class="w-8 h-8 rounded-lg bg-ocean-secondary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2f9dc0" stroke-width="2">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </div>
-          <div>
-            <p class="font-medium text-ocean-primary text-sm mb-1">Co-Chairs</p>
-            <div class="space-y-1">
-              <div>
-                <span class="text-ocean-primary/60 text-sm">Robert Todd — </span>
-                <a href="mailto:rtodd@whoi.edu" class="text-ocean-secondary text-sm hover:underline">rtodd@whoi.edu</a>
-              </div>
-              <div>
-                <span class="text-ocean-primary/60 text-sm">Filipa Carvalho — </span>
-                <a href="mailto:filcar@noc.ac.uk" class="text-ocean-secondary text-sm hover:underline">filcar@noc.ac.uk</a>
-              </div>
+        {contactRoles.map(entry => (
+          <div class="bg-white rounded-xl shadow-md border border-ocean-light/30 p-5 flex gap-4 items-start">
+            <div class="w-8 h-8 rounded-lg bg-ocean-secondary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              {entry.iconType === 'fill' ? (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#2f9dc0">
+                  <Fragment set:html={entry.icon} />
+                </svg>
+              ) : (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2f9dc0" stroke-width="2">
+                  <Fragment set:html={entry.icon} />
+                </svg>
+              )}
             </div>
-          </div>
-        </div>
-
-        <!-- Technical Coordinator -->
-        <div class="bg-white rounded-xl shadow-md border border-ocean-light/30 p-5 flex gap-4 items-start">
-          <div class="w-8 h-8 rounded-lg bg-ocean-secondary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2f9dc0" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-          </div>
-          <div>
-            <p class="font-medium text-ocean-primary text-sm mb-1">Technical Coordinator</p>
             <div>
-              <span class="text-ocean-primary/60 text-sm">Mariarita Caracciolo — </span>
-              <a href="mailto:mcaracciolo@wmo.int" class="text-ocean-secondary text-sm hover:underline">mcaracciolo@wmo.int</a>
+              <p class="font-medium text-ocean-primary text-sm mb-1">{entry.role}</p>
+              {entry.contacts ? (
+                <div class="space-y-1">
+                  {entry.contacts.map(c => (
+                    <div>
+                      <span class="text-ocean-primary/60 text-sm">{c.name} — </span>
+                      <a href={`mailto:${c.email}`} class="text-ocean-secondary text-sm hover:underline">{c.email}</a>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <a href={entry.link} target="_blank" rel="noopener" class="text-ocean-secondary text-sm hover:underline">
+                  {entry.linkText}
+                </a>
+              )}
             </div>
           </div>
-        </div>
-
-        <!-- Data Management Leads -->
-        <div class="bg-white rounded-xl shadow-md border border-ocean-light/30 p-5 flex gap-4 items-start">
-          <div class="w-8 h-8 rounded-lg bg-ocean-secondary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2f9dc0" stroke-width="2">
-              <ellipse cx="12" cy="5" rx="9" ry="3"/>
-              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
-              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
-            </svg>
-          </div>
-          <div>
-            <p class="font-medium text-ocean-primary text-sm mb-1">Data Management Leads</p>
-            <div class="space-y-1">
-              <div>
-                <span class="text-ocean-primary/60 text-sm">Jennifer Sevadjian — </span>
-                <a href="mailto:jpsevadjian@ucsd.edu" class="text-ocean-secondary text-sm hover:underline">jpsevadjian@ucsd.edu</a>
-              </div>
-              <div>
-                <span class="text-ocean-primary/60 text-sm">Emma Gardner — </span>
-                <a href="mailto:emmer@noc.ac.uk" class="text-ocean-secondary text-sm hover:underline">emmer@noc.ac.uk</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- GitHub -->
-        <div class="bg-white rounded-xl shadow-md border border-ocean-light/30 p-5 flex gap-4 items-start">
-          <div class="w-8 h-8 rounded-lg bg-ocean-secondary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#2f9dc0">
-              <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-            </svg>
-          </div>
-          <div>
-            <p class="font-medium text-ocean-primary text-sm mb-1">Community on GitHub</p>
-            <a href="https://github.com/OceanGlidersCommunity" target="_blank" rel="noopener"
-               class="text-ocean-secondary text-sm hover:underline">
-              github.com/OceanGlidersCommunity
-            </a>
-          </div>
-        </div>
+        ))}
 
         <div class="border-t border-ocean-primary/10 pt-6">
           <p class="text-ocean-primary/50 text-sm leading-relaxed text-center">
             OceanGliders is an international programme. We aim to respond to all enquiries within 5 working days.
           </p>
         </div>
-
       </div>
 
       <!-- Open Calls -->
       <div class="mt-12 mb-4 space-y-6">
+        {openCalls.map(call => (
+          <div class="bg-ocean-secondary rounded-xl p-6 text-white">
+            <p class="text-xs font-semibold uppercase tracking-widest text-white/70 mb-2">Open Call</p>
+            <h3 class="text-xl font-semibold mb-3">{call.title}</h3>
+            <p class="text-white/80 text-sm leading-relaxed mb-4">{call.description}</p>
 
-        <!-- Steering Team -->
-        <div class="bg-ocean-secondary rounded-xl p-6 text-white">
-          <p class="text-xs font-semibold uppercase tracking-widest text-white/70 mb-2">Open Call</p>
-          <h3 class="text-xl font-semibold mb-3">Call for OceanGliders Steering Team</h3>
-          <p class="text-white/80 text-sm leading-relaxed mb-4">
-            The OceanGliders Steering Team (OGST) provides scientific leadership for OceanGliders and liaises 
-            with other parts of GOOS. The call for nominations is now open — appointments will take effect in 
-            September 2026. Nominations close <span class="font-semibold text-white">30 July 2026</span>.
-          </p>
-          <p class="text-white/80 text-sm leading-relaxed mb-4">
-            OceanGliders encourages nominations from researchers in South and East Asia, early career scientists 
-            (within 10 years of their most recent degree), and candidates who can help expand the gender diversity 
-            of the present Committee.
-          </p>
-          <p class="text-white/70 text-sm mb-5">
-            Questions? Contact 
-            <a href="mailto:filipa.carvalho@noc.ac.uk" class="underline hover:text-white">Filipa Carvalho</a> 
-            or 
-            <a href="mailto:rtodd@whoi.edu" class="underline hover:text-white">Robert Todd</a>.
-          </p>
-          <a
-            href="https://docs.google.com/forms/d/1PKL6crbehXIPVyraKvlT_k9uXgDMXLKoK4LzH9n4FZw/edit"
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center gap-2 bg-white text-ocean-secondary font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-white/90 transition-colors duration-200"
-          >
-            Submit a Nomination
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-              <polyline points="15 3 21 3 21 9"/>
-              <line x1="10" y1="14" x2="21" y2="3"/>
-            </svg>
-          </a>
-        </div>
+            {call.diversity && (
+              <p class="text-white/80 text-sm leading-relaxed mb-4">{call.diversity}</p>
+            )}
 
-        <!-- Task Teams -->
-        <div class="bg-ocean-secondary rounded-xl p-6 text-white">
-          <p class="text-xs font-semibold uppercase tracking-widest text-white/70 mb-2">Open Call</p>
-          <h3 class="text-xl font-semibold mb-3">Call for Task Teams</h3>
-          <p class="text-white/80 text-sm leading-relaxed mb-4">
-            This call is addressed to existing OceanGliders Task Teams and individuals considering the formation 
-            of a new Task Team. Task Teams are set up to address specific topics and regularly report to the 
-            OceanGliders Steering Team, drawing membership from the broader international community of glider 
-            operators, users, manufacturers, and stakeholders.
-          </p>
-          <p class="text-white/80 text-sm leading-relaxed mb-2">
-            <span class="font-semibold text-white">New Task Teams:</span> submit a short abstract (1–2 pages) 
-            to <a href="mailto:mcaracciolo@wmo.int" class="underline hover:text-white">mcaracciolo@wmo.int</a> by 
-            <span class="font-semibold text-white">30 July 2026</span>.
-          </p>
-          <p class="text-white/80 text-sm leading-relaxed mb-5">
-            <span class="font-semibold text-white">Existing Task Teams:</span> submit your annual report and 
-            membership update by <span class="font-semibold text-white">30 July 2026</span>.
-          </p>
-          <a
-            href="https://docs.google.com/forms/d/1YZ8iLtvoVjpg6SzQuPwDofbBUgYgXaRaliMQQqEEYxg/edit"
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center gap-2 bg-white text-ocean-secondary font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-white/90 transition-colors duration-200"
-          >
-            Submit a Task Team Application
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-              <polyline points="15 3 21 3 21 9"/>
-              <line x1="10" y1="14" x2="21" y2="3"/>
-            </svg>
-          </a>
-        </div>
+            {call.contacts && (
+              <p class="text-white/70 text-sm mb-5">
+                Questions? Contact{' '}
+                {call.contacts.map((c, i) => (
+                  <>
+                    <a href={`mailto:${c.email}`} class="underline hover:text-white">{c.name}</a>
+                    {i < call.contacts.length - 2 ? ', ' : i === call.contacts.length - 2 ? ' or ' : ''}
+                  </>
+                ))}.
+              </p>
+            )}
 
+            {call.newTeams && (
+              <p class="text-white/80 text-sm leading-relaxed mb-2">
+                <span class="font-semibold text-white">{call.newTeams.label}:</span>{' '}
+                {call.newTeams.instruction}{' '}
+                <a href={`mailto:${call.newTeams.email}`} class="underline hover:text-white">{call.newTeams.email}</a>{' '}
+                by <span class="font-semibold text-white">{call.deadline}</span>.
+              </p>
+            )}
+
+            {call.existingTeams && (
+              <p class="text-white/80 text-sm leading-relaxed mb-5">
+                <span class="font-semibold text-white">{call.existingTeams.label}:</span>{' '}
+                {call.existingTeams.instruction.replace('the deadline above', call.deadline)}
+              </p>
+            )}
+
+            {!call.newTeams && (
+              <p class="text-white/70 text-sm mb-5">
+                Nominations close <span class="font-semibold text-white">{call.deadline}</span>.
+              </p>
+            )}
+
+            <a
+              href={call.buttonUrl}
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 bg-white text-ocean-secondary font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-white/90 transition-colors duration-200"
+            >
+              {call.buttonText}
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </div>
+        ))}
       </div>
+
     </div>
   </Section>
 </Layout>

@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Long endurance and mobility",
+    "description": "Sustained deployments of weeks to months, covering hundreds to thousands of kilometres."
+  },
+  {
+    "title": "Adaptive sampling",
+    "description": "Can be redirected to track fronts, eddies, water masses, and other evolving features."
+  },
+  {
+    "title": "Four-dimensional observations",
+    "description": "Resolving fine-scale spatial and temporal variability not captured by fixed or freely-drifting platforms."
+  },
+  {
+    "title": "Ability to operate in challenging environments",
+    "description": "Under ice, shallow continental shelves, fjords, boundary currents, and marginal seas."
+  },
+  {
+    "title": "Resolving variability across scales",
+    "description": "Observations spanning horizontal scales of kilometres to thousands of kilometres, vertical scales of centimetres to kilometres, and sub-daily to interannual variability."
+  },
+  {
+    "title": "Cross-discipline measurements",
+    "description": "Physical, biogeochemical, and acoustic observations in a single deployment, with low hydrodynamic noise making gliders particularly well-suited to passive acoustic monitoring."
+  },
+  {
+    "title": "Near-real-time data delivery",
+    "description": "Data transmitted via satellite at each surfacing, enabling adaptive mission control."
+  }
+]

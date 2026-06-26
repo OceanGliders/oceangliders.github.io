@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Call for OceanGliders Steering Team",
+    "deadline": "30 July 2026",
+    "description": "The OceanGliders Steering Team (OGST) provides scientific leadership for OceanGliders and liaises with other parts of GOOS. The call for nominations is now open — appointments will take effect in September 2026.",
+    "diversity": "OceanGliders encourages nominations from researchers in South and East Asia, early career scientists (within 10 years of their most recent degree), and candidates who can help expand the gender diversity of the present Committee.",
+    "contacts": [
+      { "name": "Filipa Carvalho", "email": "filipa.carvalho@noc.ac.uk" },
+      { "name": "Robert Todd", "email": "rtodd@whoi.edu" }
+    ],
+    "buttonText": "Submit a Nomination",
+    "buttonUrl": "https://docs.google.com/forms/d/1PKL6crbehXIPVyraKvlT_k9uXgDMXLKoK4LzH9n4FZw/edit"
+  },
+  {
+    "title": "Call for Task Teams",
+    "deadline": "30 July 2026",
+    "description": "This call is addressed to existing OceanGliders Task Teams and individuals considering the formation of a new Task Team. Task Teams are set up to address specific topics and regularly report to the OceanGliders Steering Team, drawing membership from the broader international community of glider operators, users, manufacturers, and stakeholders.",
+    "newTeams": {
+      "label": "New Task Teams",
+      "instruction": "Submit a short abstract (1–2 pages) to",
+      "email": "mcaracciolo@wmo.int"
+    },
+    "existingTeams": {
+      "label": "Existing Task Teams",
+      "instruction": "Submit your annual report and membership update by the deadline above."
+    },
+    "buttonText": "Submit a Task Team Application",
+    "buttonUrl": "https://docs.google.com/forms/d/1YZ8iLtvoVjpg6SzQuPwDofbBUgYgXaRaliMQQqEEYxg/edit"
+  }
+]

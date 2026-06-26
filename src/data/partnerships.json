@@ -1,0 +1,14 @@
+[
+  {
+    "name": "EGC",
+    "description": "Mapping glider deployers worldwide and providing tools, data management support and training opportunities for European glider operators."
+  },
+  {
+    "name": "UG2",
+    "description": "A community-based coalition aimed at bolstering scientific collaboration, information, and resource sharing for gliders."
+  },
+  {
+    "name": "GOOS-OceanOPS/WMO",
+    "description": "Monitoring and Supporting Global Ocean Observing Networks through coordination and development of IT tools for GOOS. World Meteorological Organization co-sponsors GOOS."
+  }
+]
