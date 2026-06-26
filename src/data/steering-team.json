@@ -28,62 +28,13 @@
     "bio": "Technical Coordinator of the Ocean Gliders, where she supports global coordination through real-time tracking, data management, reporting services, and the development of IT tools for underwater glider operations. She is also Coordinator of the European Glider Community (EGC), facilitating collaboration between scientists, engineers, operators, and policymakers through workshops and webinars. With a background in marine ecology and data science, she combines research coordination with strong expertise in science communication and outreach."
   },
   {
-    "name": "Callum Rollo",
-    "role": "OceanGliders Data Team Lead",
-    "institution": "Voice of the Ocean Foundation",
-    "country": "Sweden",
-    "email": "callum.rollo@voiceoftheocean.org",
-    "imageUrl": "/images/steering-team/CallumRollo.JPG",
-    "imagePosition": "center 25%",
-    "bio": "Callum is responsible for data flow, processing, and quality at Voice of the Ocean Foundation. He has 8 years of experience in the European glider community, working on standards like the OceanGliders data format and increasing the usage of common standards and controlled vocabularies. He has contributed to community owned open-source tools for glider data processing and dissemination, including pyglider, glidertest, and erddapy."
-  },
-  {
-    "name": "Emma Gardner",
-    "role": "OceanGliders Data Team Lead",
-    "institution": "NOC",
-    "country": "UK",
-    "email": "emmer@noc.ac.uk",
-    "imageUrl": "/images/steering-team/EmmaGardner.JPG",
-    "imagePosition": "center 25%",
-    "bio": "Emma has over 8 years of experience within the European glider community and is the head of Autonomous Platform data management at NOC. She first joined the European glider data task team in 2018 before it evolved into the current OceanGliders data team. She has been lead of the OceanGliders data team since 2024 in support of a global standard for glider data. Her aim is to support the uptake of the OceanGliders data format and promote data management best practices."
-  },
-  {
-    "name": "Ilker Fer",
+    "name": "Ali Aydogdu",
     "role": "OceanGliders Steering Team member",
-    "institution": "University of Bergen",
-    "country": "Norway",
-    "email": "ilker.fer@uib.no",
-    "imageUrl": "/images/steering-team/IlkerFer.jpg",
-    "imagePosition": "center 25%",
-    "bio": "Professor of physical oceanography at the Geophysical Institute, University of Bergen. He leads the Norwegian node for the European Multidisciplinary Seafloor and water column Observatory (NorEMSO) and the Norwegian National Facility for Ocean Gliders (NorGliders). His research covers ocean processes from meso- to small scales, with focus on ocean mixing and turbulence."
-  },
-  {
-    "name": "Elisabeth Remy",
-    "role": "OceanGliders Steering Team member",
-    "institution": "Mercator Ocean International",
-    "country": "France",
-    "email": "eremy@mercator-ocean.fr",
-    "imageUrl": "/images/steering-team/elisabeth.jpg",
-    "bio": "Head of the \"Physical Ocean\" unit within the R&D department at Mercator Ocean International, with expertise in global ocean data assimilation, coordination of European projects and collaborations with space agencies on the impact of observations. Member of the OceanPredict Science team."
-  },
-  {
-    "name": "Pierre Cauchy",
-    "role": "OceanGliders Steering Team member",
-    "institution": "UQAR-ISMER",
-    "country": "Canada",
-    "email": "pierre_cauchy@uqar.ca",
-    "imageUrl": "/images/steering-team/PierreCauchy.JPG",
-    "imagePosition": "center 25%",
-    "bio": "Involved in the development of Passive Acoustic Monitoring (PAM) applications on gliders since 2012, and co-scientific director of the Marine Acoustics Research Station (MARS). Interested in the multidisciplinary observation of anthropogenic and climatic pressures on the marine environment through monitoring of Ocean Sound, and the integration of glider-borne observation into underwater noise management frameworks."
-  },
-  {
-    "name": "Naomi Krauzig",
-    "role": "OceanGliders Polar mission Lead",
-    "institution": "GEOMAR Helmholtz Centre for Ocean Research Kiel",
-    "country": "Germany",
-    "email": "nkrauzig@geomar.de",
-    "imageUrl": "/images/steering-team/Naomi.jpg",
-    "bio": "Early-Career Executive member of the OceanGliders Steering Committee. Her work spans scales from small-scale mixing and microstructure processes to large-scale circulation and ocean–atmosphere–ice interactions, with glider experience in polar regions and the Mediterranean Sea. She leads glider data processing within the Physical Oceanography department at GEOMAR."
+    "institution": "Euro-Mediterranean Centre on Climate Change (CMCC)",
+    "country": "Italy",
+    "email": "ali.aydogdu@cmcc.it",
+    "imageUrl": "/images/steering-team/Ali_aydogdu.jpg",
+    "bio": "Physical oceanographer specializing in data assimilation for regional, coastal, and polar seas. He leads the regional ocean data assimilation research unit at CMCC and heads the physics component for the CMEMS Black Sea Marine Forecasting Centre."
   },
   {
     "name": "Louise Biddle",
@@ -96,23 +47,43 @@
     "bio": "Louise Biddle is the Science Director at Voice of the Ocean (VOTO), where she leads scientific strategy and supports ocean observation, data management, and research infrastructure services. She has a research background in physical oceanography and glider-based observations, having conducted field studies on upper-ocean processes in polar regions and developed observational tools. With deep experience in ocean science and autonomous platforms, she works to advance ocean research, open data, and collaboration across scientific and operational communities."
   },
   {
-    "name": "Ali Aydogdu",
+    "name": "Pierre Cauchy",
     "role": "OceanGliders Steering Team member",
-    "institution": "Euro-Mediterranean Centre on Climate Change (CMCC)",
-    "country": "Italy",
-    "email": "ali.aydogdu@cmcc.it",
-    "imageUrl": "/images/steering-team/Ali_aydogdu.jpg",
-    "bio": "Physical oceanographer specializing in data assimilation for regional, coastal, and polar seas. He leads the regional ocean data assimilation research unit at CMCC and heads the physics component for the CMEMS Black Sea Marine Forecasting Centre."
+    "institution": "UQAR-ISMER",
+    "country": "Canada",
+    "email": "pierre_cauchy@uqar.ca",
+    "imageUrl": "/images/steering-team/PierreCauchy.JPG",
+    "imagePosition": "center 25%",
+    "bio": "Involved in the development of Passive Acoustic Monitoring (PAM) applications on gliders since 2012, and co-scientific director of the Marine Acoustics Research Station (MARS). Interested in the multidisciplinary observation of anthropogenic and climatic pressures on the marine environment through monitoring of Ocean Sound, and the integration of glider-borne observation into underwater noise management frameworks."
   },
   {
-    "name": "Pierre Testor",
+    "name": "Ilker Fer",
     "role": "OceanGliders Steering Team member",
-    "institution": "LOCEAN-IPSL, CNRS/UPMC",
-    "country": "France",
-    "email": "pierre.testor@locean.ipsl.fr",
-    "imageUrl": "/images/steering-team/PierreTestor.JPG",
+    "institution": "University of Bergen",
+    "country": "Norway",
+    "email": "ilker.fer@uib.no",
+    "imageUrl": "/images/steering-team/IlkerFer.jpg",
     "imagePosition": "center 25%",
-    "bio": "Pierre Testor is a French physical oceanographer specializing in ocean currents, marine ecosystems, and global environmental change. He has led numerous sea expeditions, collecting and analyzing oceanographic data. He is a pioneer in the use of underwater gliders for ocean observation. He works at CNRS and contributes to research, publications, and doctoral supervision."
+    "bio": "Professor of physical oceanography at the Geophysical Institute, University of Bergen. He leads the Norwegian node for the European Multidisciplinary Seafloor and water column Observatory (NorEMSO) and the Norwegian National Facility for Ocean Gliders (NorGliders). His research covers ocean processes from meso- to small scales, with focus on ocean mixing and turbulence."
+  },
+  {
+    "name": "Emma Gardner",
+    "role": "OceanGliders Data Team Lead",
+    "institution": "NOC",
+    "country": "UK",
+    "email": "emmer@noc.ac.uk",
+    "imageUrl": "/images/steering-team/EmmaGardner.JPG",
+    "imagePosition": "center 25%",
+    "bio": "Emma has over 8 years of experience within the European glider community and is the head of Autonomous Platform data management at NOC. She first joined the European glider data task team in 2018 before it evolved into the current OceanGliders data team. She has been lead of the OceanGliders data team since 2024 in support of a global standard for glider data. Her aim is to support the uptake of the OceanGliders data format and promote data management best practices."
+  },
+  {
+    "name": "Naomi Krauzig",
+    "role": "OceanGliders Polar mission Lead",
+    "institution": "GEOMAR Helmholtz Centre for Ocean Research Kiel",
+    "country": "Germany",
+    "email": "nkrauzig@geomar.de",
+    "imageUrl": "/images/steering-team/Naomi.jpg",
+    "bio": "Early-Career Executive member of the OceanGliders Steering Committee. Her work spans scales from small-scale mixing and microstructure processes to large-scale circulation and ocean–atmosphere–ice interactions, with glider experience in polar regions and the Mediterranean Sea. She leads glider data processing within the Physical Oceanography department at GEOMAR."
   },
   {
     "name": "Jong-Jin Park",
@@ -124,4 +95,43 @@
     "imagePosition": "center 25%",
     "bio": "Chair of the Korean Argo Program and director of the Korea Autonomous Ocean observing System (KAOS). His team operates 15 Slocum gliders and has accumulated over 3,000 glider-days and ~77,000 km of autonomous observations. His research focuses on mesoscale-submesoscale ocean dynamics, near-inertial internal waves, and AI-based ocean state estimation."
   }
+  {
+    "name": "Charitha Pattiaratchi",
+    "role": "OceanGliders Steering Team member",
+    "institution": "University of Western Australia",
+    "country": "Australia",
+    "email": "chari.pattiaratchi@uwa.edu.au",
+    "imageUrl": "",
+    "imagePosition": "center 25%",
+    "bio": "Chari is a professor at the University of Western Australia and leads the glider-based component of the Integrated Marine Observing System (IMOS), Austrailia's national ocean observing system."
+  }
+  {
+    "name": "Elisabeth Remy",
+    "role": "OceanGliders Steering Team member",
+    "institution": "Mercator Ocean International",
+    "country": "France",
+    "email": "eremy@mercator-ocean.fr",
+    "imageUrl": "/images/steering-team/elisabeth.jpg",
+    "bio": "Head of the \"Physical Ocean\" unit within the R&D department at Mercator Ocean International, with expertise in global ocean data assimilation, coordination of European projects and collaborations with space agencies on the impact of observations. Member of the OceanPredict Science team."
+  },
+  {
+    "name": "Callum Rollo",
+    "role": "OceanGliders Data Team Lead",
+    "institution": "Voice of the Ocean Foundation",
+    "country": "Sweden",
+    "email": "callum.rollo@voiceoftheocean.org",
+    "imageUrl": "/images/steering-team/CallumRollo.JPG",
+    "imagePosition": "center 25%",
+    "bio": "Callum is responsible for data flow, processing, and quality at Voice of the Ocean Foundation. He has 8 years of experience in the European glider community, working on standards like the OceanGliders data format and increasing the usage of common standards and controlled vocabularies. He has contributed to community owned open-source tools for glider data processing and dissemination, including pyglider, glidertest, and erddapy."
+  },
+  {
+    "name": "Pierre Testor",
+    "role": "OceanGliders Steering Team member",
+    "institution": "LOCEAN-IPSL, CNRS/UPMC",
+    "country": "France",
+    "email": "pierre.testor@locean.ipsl.fr",
+    "imageUrl": "/images/steering-team/PierreTestor.JPG",
+    "imagePosition": "center 25%",
+    "bio": "Pierre Testor is a French physical oceanographer specializing in ocean currents, marine ecosystems, and global environmental change. He has led numerous sea expeditions, collecting and analyzing oceanographic data. He is a pioneer in the use of underwater gliders for ocean observation. He works at CNRS and contributes to research, publications, and doctoral supervision."
+  },
 ]
