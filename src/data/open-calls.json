@@ -1,20 +1,20 @@
 [
   {
     "title": "Call for OceanGliders Steering Team",
-    "deadline": "30 July 2026",
-    "description": "The OceanGliders Steering Team (OGST) provides scientific leadership for OceanGliders and liaises with other parts of GOOS. The call for nominations is now open — appointments will take effect in September 2026.",
-    "diversity": "OceanGliders encourages nominations from researchers in South and East Asia, early career scientists (within 10 years of their most recent degree), and candidates who can help expand the gender diversity of the present Committee.",
+    "deadline": "31 July 2026",
+    "description": "The OceanGliders Steering Team (OGST) provides scientific leadership for OceanGliders and liaises with other parts of GOOS. The call for applications is now open — new appointments will take effect in Fall 2026.",
+    "diversity": "OceanGliders encourages applications from researchers in South and East Asia, Africa, and South America, early career scientists (within 10 years of their most recent degree), and candidates who can help expand the representativeness and diversity of the Steering Team.",
     "contacts": [
       { "name": "Filipa Carvalho", "email": "filipa.carvalho@noc.ac.uk" },
       { "name": "Robert Todd", "email": "rtodd@whoi.edu" }
     ],
-    "buttonText": "Submit a Nomination",
-    "buttonUrl": "https://docs.google.com/forms/d/1PKL6crbehXIPVyraKvlT_k9uXgDMXLKoK4LzH9n4FZw/edit"
+    "buttonText": "Submit an Application",
+    "buttonUrl": "https://forms.gle/9K3TNWGvms1FYvti9"
   },
   {
     "title": "Call for Task Teams",
-    "deadline": "30 July 2026",
-    "description": "This call is addressed to existing OceanGliders Task Teams and individuals considering the formation of a new Task Team. Task Teams are set up to address specific topics and regularly report to the OceanGliders Steering Team, drawing membership from the broader international community of glider operators, users, manufacturers, and stakeholders.",
+    "deadline": "31 July 2026",
+    "description": "OceanGliders Task Teams drive focused activity on specific scientific and technical topics — from climate and carbon to ocean health, circulation, events, and prediction — connecting glider operators, scientists, manufacturers, and stakeholders across the international community.\n\nProposals for new Task Teams and reports from existing ones are welcome.",
     "newTeams": {
       "label": "New Task Teams",
       "instruction": "Submit a short abstract (1–2 pages) to",
@@ -25,6 +25,6 @@
       "instruction": "Submit your annual report and membership update by the deadline above."
     },
     "buttonText": "Submit a Task Team Application",
-    "buttonUrl": "https://docs.google.com/forms/d/1YZ8iLtvoVjpg6SzQuPwDofbBUgYgXaRaliMQQqEEYxg/edit"
+    "buttonUrl": "https://forms.gle/hJ7bWEb4UQ7rUpJA9"
   }
 ]
