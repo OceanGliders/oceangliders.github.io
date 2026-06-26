@@ -40,7 +40,10 @@ const initials = name
 
   <div class="p-5 flex flex-col gap-3 flex-1">
     <div>
-      <h3 class="font-semibold text-ocean-primary text-base leading-tight">{name}</h3>
+      {email
+        ? <a href={`mailto:${email}`} class="font-semibold text-ocean-primary text-base leading-tight hover:text-ocean-secondary transition-colors">{name}</a>
+        : <h3 class="font-semibold text-ocean-primary text-base leading-tight">{name}</h3>
+      }
       <p class="text-ocean-secondary text-sm font-medium mt-1">{role}</p>
       <p class="text-ocean-primary/50 text-xs mt-0.5">{institution}{country ? `, ${country}` : ''}</p>
     </div>
@@ -49,13 +52,5 @@ const initials = name
       <p class="text-sm text-ocean-primary/60 leading-relaxed">{bio}</p>
     )}
 
-    {email && (
-      <a
-        href={`mailto:${email}`}
-        class="text-ocean-secondary text-xs hover:text-ocean-primary transition-colors truncate mt-auto pt-1"
-      >
-        {email}
-      </a>
-    )}
   </div>
 </div>

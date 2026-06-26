@@ -2,12 +2,33 @@
 const b = import.meta.env.BASE_URL;
 const base = b.endsWith('/') ? b : b + '/';
 
-const navLinks = [
-  { href: base,                label: 'Home' },
-  { href: `${base}about/`,     label: 'About Us' },
-  { href: `${base}missions/`,  label: 'Missions' },
-  { href: `${base}open-calls/`, label: 'Open Calls' },
-  { href: `${base}contact/`,   label: 'Contact' },
+const navItems = [
+  {
+    label: 'About', href: `${base}about/`,
+    children: [
+      { label: 'Vision & Objectives', href: `${base}about/vision/` },
+      { label: 'Gliders',             href: `${base}about/gliders/` },
+      { label: 'Past, Present & Future', href: `${base}about/history/` },
+      { label: 'Partnerships',        href: `${base}about/partnerships/` },
+    ]
+  },
+  {
+    label: 'Organization', href: `${base}organization/`,
+    children: [
+      { label: 'Missions',      href: `${base}organization/missions/` },
+      { label: 'Science Themes', href: `${base}organization/themes/` },
+      { label: 'Task Teams',    href: `${base}organization/task-teams/` },
+    ]
+  },
+  { label: 'Governance', href: `${base}governance/` },
+  { label: 'Data', href: `${base}data/` },
+  {
+    label: 'Get Involved', href: `${base}get-involved/`,
+    children: [
+      { label: 'Open Calls', href: `${base}get-involved/open-calls/` },
+      { label: 'Contact',    href: `${base}get-involved/contact/` },
+    ]
+  },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -16,36 +37,66 @@ const currentPath = Astro.url.pathname;
 <header class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
   <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
     <a href={base} class="flex items-center">
-      <img
-        src={`${base}images/logo.png`}
-        alt="OceanGliders"
-        class="h-14 w-auto"
-      />
+      <img src={`${base}images/logo.png`} alt="OceanGliders" class="h-14 w-auto" />
     </a>
 
-    <ul class="hidden md:flex items-center gap-8">
-      {navLinks.map(link => (
-        <li>
-          <a
-            href={link.href}
-            class:list={[
-              'text-sm font-medium transition-colors duration-200',
-              currentPath === link.href || (link.href !== base && currentPath.startsWith(link.href))
-                ? 'text-ocean-secondary border-b-2 border-ocean-secondary pb-0.5'
-                : 'text-ocean-primary hover:text-ocean-secondary',
-            ]}
-          >
-            {link.label}
-          </a>
+    <!-- Desktop nav -->
+    <ul class="hidden md:flex items-center gap-6">
+      {navItems.map(item => (
+        <li class="relative group">
+          {item.children ? (
+            <span
+              class:list={[
+                'text-sm font-medium transition-colors duration-200 flex items-center gap-1 py-5 cursor-default select-none',
+                currentPath.startsWith(item.href) && item.href !== base
+                  ? 'text-ocean-secondary border-b-2 border-ocean-secondary'
+                  : 'text-ocean-primary group-hover:text-ocean-secondary',
+              ]}
+            >
+              {item.label}
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="mt-0.5 opacity-50">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </span>
+          ) : (
+            <a
+              href={item.href}
+              class:list={[
+                'text-sm font-medium transition-colors duration-200 flex items-center gap-1 py-5',
+                currentPath === item.href
+                  ? 'text-ocean-secondary border-b-2 border-ocean-secondary'
+                  : 'text-ocean-primary hover:text-ocean-secondary',
+              ]}
+            >
+              {item.label}
+            </a>
+          )}
+
+          {item.children && (
+            <ul class="absolute top-full left-0 mt-0 w-52 bg-white border border-gray-100 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 py-1 z-50">
+              {item.children.map(child => (
+                <li>
+                  <a
+                    href={child.href}
+                    class:list={[
+                      'block px-4 py-2.5 text-sm transition-colors duration-150',
+                      currentPath.startsWith(child.href)
+                        ? 'text-ocean-secondary font-medium bg-ocean-secondary/5'
+                        : 'text-ocean-primary hover:text-ocean-secondary hover:bg-ocean-secondary/5',
+                    ]}
+                  >
+                    {child.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
         </li>
       ))}
     </ul>
 
-    <button
-      id="mobile-menu-btn"
-      class="md:hidden text-ocean-primary hover:text-ocean-secondary"
-      aria-label="Toggle menu"
-    >
+    <!-- Mobile menu button -->
+    <button id="mobile-menu-btn" class="md:hidden text-ocean-primary hover:text-ocean-secondary" aria-label="Toggle menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <line x1="3" y1="6" x2="21" y2="6"/>
         <line x1="3" y1="12" x2="21" y2="12"/>
@@ -54,22 +105,40 @@ const currentPath = Astro.url.pathname;
     </button>
   </nav>
 
+  <!-- Mobile menu -->
   <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4">
-    <ul class="flex flex-col gap-4">
-      {navLinks.map(link => (
-        <li>
-          <a
-            href={link.href}
-            class:list={[
-              'text-sm font-medium block py-1 transition-colors duration-200',
-              currentPath === link.href
-                ? 'text-ocean-secondary'
-                : 'text-ocean-primary hover:text-ocean-secondary',
-            ]}
-          >
-            {link.label}
-          </a>
-        </li>
+    <ul class="flex flex-col gap-1">
+      {navItems.map(item => (
+        <>
+          <li>
+            <a
+              href={item.href}
+              class:list={[
+                'block text-sm font-medium py-2 transition-colors duration-200',
+                currentPath === item.href || (item.href !== base && currentPath.startsWith(item.href))
+                  ? 'text-ocean-secondary'
+                  : 'text-ocean-primary hover:text-ocean-secondary',
+              ]}
+            >
+              {item.label}
+            </a>
+          </li>
+          {item.children?.map(child => (
+            <li>
+              <a
+                href={child.href}
+                class:list={[
+                  'block text-sm py-1.5 pl-4 transition-colors duration-200',
+                  currentPath.startsWith(child.href)
+                    ? 'text-ocean-secondary font-medium'
+                    : 'text-ocean-primary/60 hover:text-ocean-secondary',
+                ]}
+              >
+                {child.label}
+              </a>
+            </li>
+          ))}
+        </>
       ))}
     </ul>
   </div>
