@@ -1,0 +1,66 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Section from '@/components/Section.astro';
+
+const b = import.meta.env.BASE_URL;
+const base = b.endsWith('/') ? b : b + '/';
+---
+<Layout title="Vision & Objectives" description="OceanGliders vision and network objectives.">
+  <div class="relative bg-ocean-primary text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-5" style="background-image: linear-gradient(#2f9dc0 1px, transparent 1px), linear-gradient(90deg, #2f9dc0 1px, transparent 1px); background-size: 60px 60px;"></div>
+    <div class="relative max-w-6xl mx-auto px-6 py-28 md:py-40">
+      <h1 class="text-3xl md:text-5xl font-semibold leading-tight mb-6 max-w-[45rem]">
+        <span class="block">OceanGliders:</span>
+        the underwater glider component of the integrated
+        <span class="text-ocean-secondary"> Global Ocean Observing System</span>
+      </h1>
+      <p class="text-white/70 text-lg max-w-xl mb-10 leading-relaxed">
+        Autonomous underwater gliders delivering near-real-time, four-dimensional views
+        of the ocean to science and society.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href={`${base}organization/`} class="btn-outline">How We Are Organized</a>
+        <a href={`${base}get-involved/`} class="bg-white/10 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/20 transition-colors duration-200">
+          Get Involved
+        </a>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-12 bg-ocean-surface" style="clip-path: ellipse(55% 100% at 50% 100%);"></div>
+  </div>
+  <Section>
+    <div>
+      <h2 class="section-heading mb-6">Our Vision</h2>
+      <div class="space-y-4 text-ocean-primary/70 leading-relaxed text-base mb-16">
+        <p>
+          The ocean's most productive and societally important regions, including coastal boundaries, polar seas,
+          and open ocean fronts and eddies, are shaped by fine-scale dynamics whose sustained, subsurface observation
+          remains one of the central challenges in ocean observing.
+        </p>
+        <p>
+          As a component of the Global Ocean Observing System (GOOS), OceanGliders envisions a future in which gliders,
+          uniquely capable of sustained and targeted sampling across these diverse environments, systematically deliver
+          the observations needed to fill these observing gaps. In this future, glider observations routinely inform
+          climate projections, ecosystem management, and societal responses to ocean variability and change, as part of
+          a more complete and connected global ocean observing system that builds a clearer picture of the ocean's role
+          in climate, ecosystems, and society.
+        </p>
+      </div>
+      <h2 class="section-heading mb-6">OceanGliders Objectives</h2>
+      <div class="space-y-4 text-ocean-primary/70 leading-relaxed text-base">
+        <p>
+          OceanGliders coordinates sustained glider observations within GOOS, delivering high-resolution,
+          four-dimensional data for operational and scientific applications. OceanGliders works toward a future in which:
+        </p>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Ocean variability and change are better understood across a range of spatial and temporal scales;</li>
+          <li>Glider observations are cross-disciplinary, simultaneously capturing physical, biogeochemical, and ecosystem Essential Ocean Variables across all missions;</li>
+          <li>Glider observations inform ocean, weather, climate, and ecosystem prediction and societal decision-making;</li>
+          <li>Sustained observing coverage exists in coastal, polar, and other dynamically significant environments;</li>
+          <li>Glider data are open, interoperable, and of consistently high quality;</li>
+          <li>A globally inclusive glider community exists, built on international collaboration, innovation, and shared best practices; and</li>
+          <li>Glider observations are integrated with complementary observing systems, strengthening the GOOS.</li>
+        </ul>
+      </div>
+    </div>
+  </Section>
+</Layout>

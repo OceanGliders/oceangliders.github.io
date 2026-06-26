@@ -6,7 +6,7 @@ export default {
       colors: {
         ocean: {
           primary:   '#1a6a85',  // dark teal — nav, hero, dark sections
-          secondary: '#2f9dc0',  // logo teal — accents, links, highlights
+          secondary: '#E8795A',  // coral — accents, links, highlights
           light:     '#87cbe8',  // light blue — subtle accents
           surface:   '#f0f8fc',  // very light blue tint — page background
         },

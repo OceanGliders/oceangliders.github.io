@@ -1,0 +1,59 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Section from '@/components/Section.astro';
+import missions from '../../data/missions.json';
+---
+<Layout title="Missions" description="OceanGliders three permanent missions: BOON, FLOOD, and Polar.">
+  <div class="relative bg-ocean-primary text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-5" style="background-image: linear-gradient(#2f9dc0 1px, transparent 1px), linear-gradient(90deg, #2f9dc0 1px, transparent 1px); background-size: 60px 60px;"></div>
+    <div class="relative max-w-6xl mx-auto px-6 py-24 md:py-36">
+      <p class="text-ocean-secondary text-xs font-semibold uppercase tracking-widest mb-4">Organization</p>
+      <h1 class="text-3xl md:text-5xl font-semibold leading-tight mb-6 max-w-3xl">Three Missions, One Global Network</h1>
+      <p class="text-white/70 text-lg max-w-xl leading-relaxed">
+        OceanGliders is structured around three permanent missions, each targeting a distinct operational environment
+        and connected as coordinated contributions to the GOOS.
+      </p>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-12 bg-ocean-surface" style="clip-path: ellipse(55% 100% at 50% 100%);"></div>
+  </div>
+  <Section>
+    <p class="text-ocean-primary/70 leading-relaxed mb-12">
+      Missions are coordinated implementation domains organised around common operational environments, observing
+      constraints, deployment strategies, and community needs. All three missions pursue the same scientific
+      objectives; what distinguishes them is how observations are delivered, shaped by the operational context
+      and logistical demands of each environment.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {missions.map(m => (
+        <a href={`#${m.id}`} class="bg-white rounded-xl shadow-md border border-ocean-light/30 p-6 hover:shadow-lg transition-shadow duration-200 group flex flex-col gap-3">
+          <p class="text-xs font-semibold uppercase tracking-widest text-ocean-secondary">{m.acronym}</p>
+          <h3 class="font-semibold text-ocean-primary group-hover:text-ocean-secondary transition-colors leading-snug">{m.title}</h3>
+          <p class="text-ocean-primary/60 text-sm leading-relaxed">{m.summary}</p>
+        </a>
+      ))}
+    </div>
+  </Section>
+
+
+  {missions.map((m, i) => (
+    <Section dark={i % 2 !== 0}>
+      <div id={m.id} class="scroll-mt-32">
+        <p class="text-xs font-semibold uppercase tracking-widest text-ocean-secondary mb-4">{m.acronym}</p>
+        <h2 class={`text-2xl md:text-3xl font-semibold leading-snug mb-3 ${i % 2 !== 0 ? 'text-white' : 'text-ocean-primary'}`}>{m.title}</h2>
+        <p class="text-sm font-medium mb-6 text-ocean-secondary">
+          Leads:{' '}
+          {m.leads.map((lead, li) => (
+            <>
+              {lead.email
+                ? <a href={`mailto:${lead.email}`} class="hover:underline">{lead.name} ({lead.institution})</a>
+                : <span>{lead.name} ({lead.institution})</span>
+              }
+              {li < m.leads.length - 1 ? ', ' : ''}
+            </>
+          ))}
+        </p>
+        <p class={`leading-relaxed text-base ${i % 2 !== 0 ? 'text-white/70' : 'text-ocean-primary/70'}`}>{m.body}</p>
+      </div>
+    </Section>
+  ))}
+</Layout>

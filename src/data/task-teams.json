@@ -2,16 +2,16 @@
   {
     "name": "Passive Acoustic Monitoring (PAM)",
     "lead": "Pierre Cauchy",
-    "description": "The PAM TT is leaded by Pierre Cauchy. [...]"
+    "leadEmail": "pierre_cauchy@uqar.ca"
   },
   {
     "name": "Data Assimilation (DA)",
     "lead": "Ali Aydogdu",
-    "description": "The DA TT is leaded by Ali Aydogdu. [...]"
+    "leadEmail": "ali.aydogdu@cmcc.it"
   },
   {
     "name": "Extreme Events (EE)",
     "lead": "Charitha Pattiaratchi",
-    "description": "The EE TT is leaded by Charitha Pattiaratchi. [...]"
+    "leadEmail": "chari.pattiaratchi@uwa.edu.au"
   }
 ]

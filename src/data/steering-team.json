@@ -7,7 +7,7 @@
     "email": "rtodd@whoi.edu",
     "imageUrl": "/images/steering-team/RobertTodd.jpg",
     "imagePosition": "center 25%",
-    "bio": "Robert is a physical oceanographer at the Woods Hole Oceanographic Institution (WHOI). His research focuses on boundary current systems and upper ocean processes. Since 2015, he has led efforts to routinely sample the Gulf Stream along the US East Coast using gliders. He has long used small Doppler current profilers on gliders to measure depth-resolved ocean currents alongside other physical and biogeochemical properties. Robert has been involved with OceanGliders since 2016, having joined the Steering Team in 2022 and serving as co-Chair since 2025."
+    "bio": "Robert is a physical oceanographer at the Woods Hole Oceanographic Institution (WHOI). His research focuses on boundary current systems and upper ocean processes, with sustained glider sampling of the Gulf Stream along the US East Coast since 2015. He uses Doppler current profilers on gliders to measure depth-resolved ocean currents alongside physical and biogeochemical properties. He has been involved with OceanGliders since 2016, joining the Steering Team in 2022 and serving as Co-Chair since 2025."
   },
   {
     "name": "Filipa Carvalho",
@@ -16,7 +16,7 @@
     "country": "United Kingdom",
     "email": "filipa.carvalho@noc.ac.uk",
     "imageUrl": "/images/steering-team/filipa.JPG",
-    "bio": "Filipa is a biological oceanographer and marine biogeochemist at the National Oceanography Centre (UK), studying biophysical interactions and the biological carbon pump using underwater gliders and other autonomous platforms. Her work focuses on how water column dynamics influence phytoplankton and carbon export, particularly in polar regions. She is an active member of the OceanGliders programme and, since November 2024, Chief Scientist for the Marine Autonomy Robotics Systems (MARS) group, fostering links between marine science and technology."
+    "bio": "Filipa is a biological oceanographer and marine biogeochemist at the National Oceanography Centre (UK). Her research focuses on biophysical interactions and the biological carbon pump, using underwater gliders and other autonomous platforms. She studies how water column dynamics influence phytoplankton and carbon export, particularly in polar regions. She joined the Steering Team in 2022 and has served as Co-Chair since 2025."
   },
   {
     "name": "Mariarita Caracciolo",
@@ -25,7 +25,7 @@
     "country": "France",
     "email": "mcaracciolo@wmo.int",
     "imageUrl": "/images/steering-team/mariarita.jpg",
-    "bio": "Technical Coordinator of the Ocean Gliders, where she supports global coordination through real-time tracking, data management, reporting services, and the development of IT tools for underwater glider operations. She is also Coordinator of the European Glider Community (EGC), facilitating collaboration between scientists, engineers, operators, and policymakers through workshops and webinars. With a background in marine ecology and data science, she combines research coordination with strong expertise in science communication and outreach."
+    "bio": "Mariarita is the Technical Coordinator of OceanGliders, based at ENSTA/OceanOPS-WMO in France. With a background in marine ecology and data science, she supports global network coordination through real-time tracking, data management, reporting, and the development of IT tools for glider operations. She has strong expertise in science communication and outreach. She is also Coordinator of the European Glider Community (EGC), facilitating collaboration between scientists, engineers, operators, and policymakers through workshops and webinars."
   },
   {
     "name": "Ali Aydogdu",
@@ -34,7 +34,7 @@
     "country": "Italy",
     "email": "ali.aydogdu@cmcc.it",
     "imageUrl": "/images/steering-team/Ali_aydogdu.jpg",
-    "bio": "Physical oceanographer specializing in data assimilation for regional, coastal, and polar seas. He leads the regional ocean data assimilation research unit at CMCC and heads the physics component for the CMEMS Black Sea Marine Forecasting Centre."
+    "bio": "Ali is a physical oceanographer at the Euro-Mediterranean Centre on Climate Change (CMCC), Italy. His research focuses on data assimilation for regional, coastal, and polar seas. He leads the regional ocean data assimilation research unit at CMCC and heads the physics component for the CMEMS Black Sea Marine Forecasting Centre."
   },
   {
     "name": "Louise Biddle",
@@ -44,7 +44,7 @@
     "email": "louise.biddle@voiceoftheocean.org",
     "imageUrl": "/images/steering-team/LouiseBiddle.JPG",
     "imagePosition": "center 25%",
-    "bio": "Louise Biddle is the Science Director at Voice of the Ocean (VOTO), where she leads scientific strategy and supports ocean observation, data management, and research infrastructure services. She has a research background in physical oceanography and glider-based observations, having conducted field studies on upper-ocean processes in polar regions and developed observational tools. With deep experience in ocean science and autonomous platforms, she works to advance ocean research, open data, and collaboration across scientific and operational communities."
+    "bio": "Louise is Science Director at the Voice of the Ocean Foundation (VOTO), Sweden. Her research background is in physical oceanography and glider-based observations of upper-ocean processes, particularly in polar regions. She leads scientific strategy and supports ocean observation, data management, and research infrastructure services, advancing open data and collaboration across scientific and operational communities."
   },
   {
     "name": "Pierre Cauchy",
@@ -54,7 +54,7 @@
     "email": "pierre_cauchy@uqar.ca",
     "imageUrl": "/images/steering-team/PierreCauchy.JPG",
     "imagePosition": "center 25%",
-    "bio": "Involved in the development of Passive Acoustic Monitoring (PAM) applications on gliders since 2012, and co-scientific director of the Marine Acoustics Research Station (MARS). Interested in the multidisciplinary observation of anthropogenic and climatic pressures on the marine environment through monitoring of Ocean Sound, and the integration of glider-borne observation into underwater noise management frameworks."
+    "bio": "Pierre is co-scientific director of the Marine Acoustics Research Station (MARS) at UQAR-ISMER, Canada. His research focuses on Passive Acoustic Monitoring (PAM) using underwater gliders, with involvement in PAM glider applications since 2012. He studies anthropogenic and climatic pressures on the marine environment through ocean sound monitoring and its integration into underwater noise management frameworks."
   },
   {
     "name": "Ilker Fer",
@@ -64,7 +64,7 @@
     "email": "ilker.fer@uib.no",
     "imageUrl": "/images/steering-team/IlkerFer.jpg",
     "imagePosition": "center 25%",
-    "bio": "Professor of physical oceanography at the Geophysical Institute, University of Bergen. He leads the Norwegian node for the European Multidisciplinary Seafloor and water column Observatory (NorEMSO) and the Norwegian National Facility for Ocean Gliders (NorGliders). His research covers ocean processes from meso- to small scales, with focus on ocean mixing and turbulence."
+    "bio": "Ilker is a Professor of physical oceanography at the Geophysical Institute, University of Bergen, Norway. His research covers ocean processes from meso- to small scales, with a focus on ocean mixing and turbulence. He leads the Norwegian National Facility for Ocean Gliders (NorGliders) and the Norwegian node for the European Multidisciplinary Seafloor and water column Observatory (NorEMSO)."
   },
   {
     "name": "Emma Gardner",
@@ -74,7 +74,7 @@
     "email": "emmer@noc.ac.uk",
     "imageUrl": "",
     "imagePosition": "center 25%",
-    "bio": "Emma has over 8 years of experience within the European glider community and is the head of Autonomous Platform data management at NOC. She first joined the European glider data task team in 2018 before it evolved into the current OceanGliders data team. She has been lead of the OceanGliders data team since 2024 in support of a global standard for glider data. Her aim is to support the uptake of the OceanGliders data format and promote data management best practices."
+    "bio": "Emma is head of Autonomous Platform data management at the National Oceanography Centre (NOC), UK. Her work focuses on glider data management, standardisation, and best practices, in support of a global standard for glider data. She first joined the European glider data task team in 2018 before it evolved into the current OceanGliders data team. She has led the OceanGliders data team since 2024."
   },
   {
     "name": "Naomi Krauzig",
@@ -83,7 +83,7 @@
     "country": "Germany",
     "email": "nkrauzig@geomar.de",
     "imageUrl": "/images/steering-team/Naomi.jpg",
-    "bio": "Early-Career Executive member of the OceanGliders Steering Committee. Her work spans scales from small-scale mixing and microstructure processes to large-scale circulation and ocean–atmosphere–ice interactions, with glider experience in polar regions and the Mediterranean Sea. She leads glider data processing within the Physical Oceanography department at GEOMAR."
+    "bio": "Naomi is based at GEOMAR Helmholtz Centre for Ocean Research Kiel, Germany. Her work spans from small-scale mixing and microstructure processes to large-scale circulation and ocean–atmosphere–ice interactions, with glider experience in polar regions and the Mediterranean Sea. She leads glider data processing within the Physical Oceanography department at GEOMAR. She is an Early-Career Executive member of the OceanGliders Steering Team and leads the Polar Mission."
   },
   {
     "name": "Joe O'Callaghan",
@@ -102,7 +102,7 @@
     "email": "jjpark@knu.ac.kr",
     "imageUrl": "/images/steering-team/JJPark.PNG",
     "imagePosition": "center 25%",
-    "bio": "Chair of the Korean Argo Program and director of the Korea Autonomous Ocean observing System (KAOS). His team operates 15 Slocum gliders and has accumulated over 3,000 glider-days and ~77,000 km of autonomous observations. His research focuses on mesoscale-submesoscale ocean dynamics, near-inertial internal waves, and AI-based ocean state estimation."
+    "bio": "Jong-Jin is at Kyungpook National University, Republic of Korea. His research focuses on mesoscale-submesoscale ocean dynamics, near-inertial internal waves, and AI-based ocean state estimation. His team has accumulated over 3,000 glider-days and ~77,000 km of autonomous observations. He chairs the Korean Argo Program and directs the Korea Autonomous Ocean Observing System (KAOS)."
   },
   {
     "name": "Charitha Pattiaratchi",
@@ -112,7 +112,7 @@
     "email": "chari.pattiaratchi@uwa.edu.au",
     "imageUrl": "",
     "imagePosition": "center 25%",
-    "bio": "Chari is a professor at the University of Western Australia and leads the glider-based component of the Integrated Marine Observing System (IMOS), Austrailia's national ocean observing system."
+    "bio": "Charitha is a professor at the University of Western Australia and leads the glider-based component of the Integrated Marine Observing System (IMOS), Australia's national ocean observing system."
   },
   {
     "name": "Elisabeth Remy",
@@ -121,7 +121,7 @@
     "country": "France",
     "email": "eremy@mercator-ocean.fr",
     "imageUrl": "/images/steering-team/elisabeth.jpg",
-    "bio": "Head of the \"Physical Ocean\" unit within the R&D department at Mercator Ocean International, with expertise in global ocean data assimilation, coordination of European projects and collaborations with space agencies on the impact of observations. Member of the OceanPredict Science team."
+    "bio": "Elisabeth is head of the Physical Ocean unit within the R&D department at Mercator Ocean International, France. Her expertise is in global ocean data assimilation, including coordination of European projects and collaborations with space agencies on the impact of ocean observations. She is a member of the OceanPredict Science team."
   },
   {
     "name": "Callum Rollo",
@@ -131,7 +131,7 @@
     "email": "callum.rollo@voiceoftheocean.org",
     "imageUrl": "/images/steering-team/CallumRollo.JPG",
     "imagePosition": "center 25%",
-    "bio": "Callum is responsible for data flow, processing, and quality at Voice of the Ocean Foundation. He has 8 years of experience in the European glider community, working on standards like the OceanGliders data format and increasing the usage of common standards and controlled vocabularies. He has contributed to community owned open-source tools for glider data processing and dissemination, including pyglider, glidertest, and erddapy."
+    "bio": "Callum is responsible for data flow, processing, and quality at the Voice of the Ocean Foundation (VOTO), Sweden. His work focuses on glider data standardisation, including the OceanGliders data format, common standards, and controlled vocabularies. He has contributed to community open-source tools for glider data processing and dissemination, including pyglider, glidertest, and erddapy. He has been active in the European and global glider community for over 8 years."
   },
   {
     "name": "Pierre Testor",
@@ -141,6 +141,6 @@
     "email": "pierre.testor@locean.ipsl.fr",
     "imageUrl": "/images/steering-team/PierreTestor.JPG",
     "imagePosition": "center 25%",
-    "bio": "Pierre Testor is a French physical oceanographer specializing in ocean currents, marine ecosystems, and global environmental change. He has led numerous sea expeditions, collecting and analyzing oceanographic data. He is a pioneer in the use of underwater gliders for ocean observation. He works at CNRS and contributes to research, publications, and doctoral supervision."
+    "bio": "Pierre is a physical oceanographer at LOCEAN-IPSL, CNRS/UPMC, France, specialising in ocean currents, marine ecosystems, and global environmental change. He has led numerous sea expeditions, collecting and analysing oceanographic data. He is a pioneer in the use of underwater gliders for ocean observation. He contributes to research, publications, and doctoral supervision at CNRS."
   }
 ]

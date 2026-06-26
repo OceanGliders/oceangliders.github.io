@@ -12,9 +12,12 @@
     "buttonUrl": "https://forms.gle/9K3TNWGvms1FYvti9"
   },
   {
+    "id": "task-teams",
     "title": "Call for New and Existing Task Teams",
     "deadline": "31 July 2026",
-    "description": "OceanGliders Task Teams bring people together around a shared focus — whether that's science, applications, or community best practices. Science themes like climate, carbon, ocean health, circulation, and extreme events are natural starting points, but teams can also tackle data standards, sensor technology, regional coordination, or any topic the community should be working on together.\n\nBefore applying, check the Task Teams page to see if your idea already aligns with an existing team — if so, reach out to the leads directly. Both new proposals and updates from existing Task Teams are submitted through the same form.",
+    "description": "OceanGliders Task Teams bring people together around a shared focus — whether that's science, applications, or community best practices. Science themes like climate, carbon, ocean health, circulation, and extreme events are natural starting points, but teams can also tackle data standards, sensor technology, regional coordination, or any topic the community should be working on together.",
+    "taskTeamsNote": "to see if your idea already aligns with an existing team — if so, reach out to the leads directly. Both new proposals and updates from existing Task Teams are submitted through the same form.",
+    "questionsLabel": "General Task Team related questions?",
     "contacts": [
       { "name": "Filipa Carvalho", "email": "filipa.carvalho@noc.ac.uk" },
       { "name": "Robert Todd", "email": "rtodd@whoi.edu" }

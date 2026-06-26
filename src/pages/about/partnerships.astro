@@ -1,0 +1,29 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Section from '@/components/Section.astro';
+import partnerships from '../../data/partnerships.json';
+---
+<Layout title="Partnerships" description="OceanGliders community partnerships and regional groups.">
+  <div class="bg-ocean-primary text-white">
+    <div class="max-w-6xl mx-auto px-6 py-24">
+      <p class="section-subheading text-ocean-secondary">About</p>
+      <h1 class="text-4xl md:text-5xl font-semibold mb-4 leading-tight">Partnerships</h1>
+    </div>
+  </div>
+  <Section>
+    <p class="text-ocean-primary/60 mb-10 leading-relaxed">
+      The Underwater Gliders User Group (UG2) and the European Glider Community (EGC) are regional community-led
+      groups connecting glider operators, scientists, and stakeholders, promoting knowledge exchange and coordination
+      across national and regional programmes. Glider manufacturers and technology developers are also active partners,
+      contributing to platform innovation, sensor development, and the long-term operational sustainability of the network.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {partnerships.map(p => (
+        <div class="bg-white rounded-xl shadow-md border border-ocean-light/30 p-6 hover:shadow-lg transition-shadow duration-200">
+          <h3 class="text-ocean-primary font-semibold mb-2">{p.name}</h3>
+          <p class="text-ocean-primary/60 text-sm leading-relaxed">{p.description}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+</Layout>

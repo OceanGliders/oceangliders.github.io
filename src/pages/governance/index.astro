@@ -1,0 +1,145 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Section from '@/components/Section.astro';
+import FlexibleGrid from '@/components/FlexibleGrid.astro';
+import TeamCard from '@/components/TeamCard.astro';
+import steeringTeam from '../../data/steering-team.json';
+---
+<Layout title="Governance" description="OceanGliders Steering Team and Terms of Reference.">
+  <div class="bg-ocean-primary text-white">
+    <div class="max-w-6xl mx-auto px-6 py-24">
+      <h1 class="text-4xl md:text-5xl font-semibold mb-4 leading-tight">Governance</h1>
+      <p class="text-white/70 text-lg max-w-xl leading-relaxed">
+        OceanGliders is governed by the OceanGliders Steering Team (OGST), which provides scientific leadership and strategic oversight for the network.
+      </p>
+    </div>
+  </div>
+
+  <Section>
+    <h2 class="section-heading mb-6">OceanGliders Steering Team (OGST)</h2>
+    <p class="text-ocean-primary/60 mb-4 leading-relaxed">
+      The OGST defines and reviews the vision, objectives, and scientific priorities of OceanGliders, oversees network performance,
+      and represents OceanGliders within the GOOS Observations Coordination Group (OCG).
+    </p>
+    <p class="text-ocean-primary/60 mb-12 leading-relaxed">
+      An Executive Group, comprising OGST Co-Chairs, OGDMT Co-Chairs, the OceanGliders Technical Coordinator,
+      and up to five additional OGST members, coordinates activities between plenary meetings.
+    </p>
+    <FlexibleGrid cols={3} gap="md">
+      {steeringTeam.map(member => (
+        <TeamCard {...member} />
+      ))}
+    </FlexibleGrid>
+  </Section>
+
+  <Section>
+    <h2 class="section-heading mb-6">OceanGliders Data Management Team (OGDMT)</h2>
+    <p class="text-ocean-primary/60 mb-4 leading-relaxed">
+      The OGDMT coordinates data management activities, ensuring integrated and interoperable access to glider
+      observations across the global network and within the broader GOOS data infrastructure.
+    </p>
+    <p class="text-ocean-primary/60 leading-relaxed">
+      The OGDMT defines data formats, quality control procedures, and best practices, and collaborates with OceanOPS
+      to ensure FAIR data principles are applied consistently across the network. Data standards and formats are
+      maintained at the <a href="https://github.com/OceanGlidersCommunity" target="_blank" rel="noopener" class="text-ocean-secondary hover:underline">OceanGliders Community GitHub</a>.
+    </p>
+  </Section>
+
+  <Section dark>
+    <h2 class="text-2xl md:text-3xl font-semibold text-white mb-10">Terms of Reference</h2>
+
+    <div class="space-y-10 text-white/70 leading-relaxed">
+
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-3">Purpose</h3>
+        <p>
+          The OGST provides scientific leadership and oversight for the global OceanGliders network, a component of GOOS.
+          It guides the development, coordination, and implementation of a sustained, global network of autonomous underwater gliders.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4">Responsibilities</h3>
+        <div class="space-y-6">
+          <div>
+            <p class="font-medium text-white/90 mb-2">Scientific coordination</p>
+            <ul class="list-disc pl-5 space-y-1 text-sm">
+              <li>Define scope, vision, and scientific objectives of the OceanGliders network.</li>
+              <li>Oversee a global-scale glider network for sustained EOV profiles in key regions, complementing other GOOS networks.</li>
+              <li>Establish and periodically update sampling strategies, target regions, and performance metrics.</li>
+              <li>Promote integration with other GOOS networks (Argo, OceanSITES, GO-SHIP, FVON, etc.).</li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-medium text-white/90 mb-2">Technical oversight, data quality, and best practices</p>
+            <ul class="list-disc pl-5 space-y-1 text-sm">
+              <li>In collaboration with OGDMT, ensure accuracy, quality, and timeliness of OceanGliders data products.</li>
+              <li>Provide guidance to and supervise the OceanGliders Technical Coordinator; define the TC Terms of Reference with the OCG.</li>
+              <li>Review and advise on technological innovations and best practices.</li>
+              <li>Promote harmonisation of methods, standards, and formats across international and regional programmes.</li>
+              <li>Endorse best practices for glider operations, data management, and metadata documentation.</li>
+              <li>Support adoption of FAIR data principles across the OceanGliders community.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-medium text-white/90 mb-2">Partnership and representation</p>
+            <ul class="list-disc pl-5 space-y-1 text-sm">
+              <li>Represent OceanGliders within the GOOS OCG.</li>
+              <li>Liaise with CLIVAR panels, regional alliances, and other international bodies.</li>
+              <li>Promote visibility with the international community, stakeholders, and end-users.</li>
+              <li>Support development of new sensor and platform technologies.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-medium text-white/90 mb-2">Capacity development and sustainability</p>
+            <ul class="list-disc pl-5 space-y-1 text-sm">
+              <li>Identify needs and opportunities for training, knowledge exchange, and capacity building.</li>
+              <li>Support national and regional efforts to secure sustained funding and institutional commitment.</li>
+              <li>Develop and maintain a capacity-building strategy to enhance participation from underrepresented regions.</li>
+              <li>Promote diversity, equity, and inclusion; ensure balanced representation across regions, career stages, and genders.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-3">Composition</h3>
+        <ul class="list-disc pl-5 space-y-1 text-sm">
+          <li>Scientists and technical experts from national or regional programmes contributing to OceanGliders.</li>
+          <li>The (co-)chairs of the OceanGliders Data Management Team (OGDMT).</li>
+          <li>The (co-)chairs of any defined OceanGliders missions.</li>
+          <li>The OceanGliders Technical Coordinator (ex officio, nonvoting).</li>
+        </ul>
+        <p class="text-sm mt-3">
+          Members serve 3-year terms, renewable. New and returning members apply through open calls.
+          Membership rotations are staggered to ensure continuity. Chairs serve no more than two consecutive terms.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-3">Executive Group</h3>
+        <p class="text-sm mb-3">
+          Coordinates OGST activities between plenary meetings. Comprises OGST Co-Chairs, OGDMT Co-Chairs,
+          the OceanGliders Technical Coordinator (ex officio, nonvoting), and up to five OGST members selected
+          for balanced regional representation.
+        </p>
+        <p class="text-sm">
+          Focus: administrative tasks including reporting, member selection, meeting scheduling, OCG liaison,
+          and coordinating financial support.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-3">Meetings and governance</h3>
+        <ul class="list-disc pl-5 space-y-1 text-sm">
+          <li>OGST meets every other month; Executive Group meets in the alternate months.</li>
+          <li>Meetings are self-funded through national programmes and institutions.</li>
+          <li>Decisions by simple majority; quorum is 50% of voting members.</li>
+          <li>OGST reports to the GOOS OCG.</li>
+          <li>ToR reviewed every 3 years, coincident with new terms of OGST Chairs, and submitted to OCG for endorsement.</li>
+        </ul>
+      </div>
+
+    </div>
+  </Section>
+</Layout>

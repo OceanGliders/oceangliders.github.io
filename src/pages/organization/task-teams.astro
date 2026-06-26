@@ -1,0 +1,43 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Section from '@/components/Section.astro';
+import taskTeams from '../../data/task-teams.json';
+---
+<Layout title="Task Teams" description="OceanGliders Task Teams.">
+  <div class="bg-ocean-primary text-white">
+    <div class="max-w-6xl mx-auto px-6 py-24">
+      <p class="section-subheading text-ocean-secondary">Organization</p>
+      <h1 class="text-4xl md:text-5xl font-semibold mb-4 leading-tight">Task Teams</h1>
+      <p class="text-white/70 text-lg max-w-xl leading-relaxed">
+        Task Teams address specific scientific and technical topics, drawing membership from the broader international community.
+      </p>
+    </div>
+  </div>
+  <Section>
+    <p class="text-ocean-primary/60 mb-4 leading-relaxed">
+      Task Teams address specific scientific themes and technical topics, drawing membership from
+      the broader international community of glider operators, scientists, manufacturers, and stakeholders.
+      Task Teams report regularly to the OGST and co-leads will be invited to integrate the OGST.
+    </p>
+    <p class="text-ocean-primary/60 mb-4 leading-relaxed">
+      Full governance details are set out in the OGST Terms of Reference.
+    </p>
+    <p class="text-ocean-primary/60 mb-12 leading-relaxed">
+      Current task teams are under review. If interested in an existing Task Team, contact the current lead.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {taskTeams.map(tt => (
+        <div class="bg-white rounded-xl shadow-md border border-ocean-light/30 p-6 hover:shadow-lg transition-shadow duration-200">
+          <h3 class="text-ocean-primary font-semibold mb-3">{tt.name}</h3>
+          <p class="text-ocean-primary/60 text-sm">
+            <span class="font-medium text-ocean-primary/80">Lead:</span>{' '}
+            {tt.leadEmail
+              ? <a href={`mailto:${tt.leadEmail}`} class="text-ocean-secondary hover:underline">{tt.lead}</a>
+              : tt.lead
+            }
+          </p>
+        </div>
+      ))}
+    </div>
+  </Section>
+</Layout>
