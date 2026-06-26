@@ -3,10 +3,11 @@ const b = import.meta.env.BASE_URL;
 const base = b.endsWith('/') ? b : b + '/';
 
 const navLinks = [
-  { href: base,              label: 'Home' },
-  { href: `${base}about/`,   label: 'About Us' },
+  { href: base,                label: 'Home' },
+  { href: `${base}about/`,     label: 'About Us' },
   { href: `${base}missions/`,  label: 'Missions' },
-  { href: `${base}contact/`, label: 'Contact' },
+  { href: `${base}open-calls/`, label: 'Open Calls' },
+  { href: `${base}contact/`,   label: 'Contact' },
 ];
 
 const currentPath = Astro.url.pathname;

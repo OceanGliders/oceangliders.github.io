@@ -2,7 +2,6 @@
 import Layout from '@/layouts/Layout.astro';
 import Section from '@/components/Section.astro';
 import contactRoles from '../data/contact-roles.json';
-import openCalls from '../data/open-calls.json';
 ---
 
 <Layout
@@ -83,69 +82,6 @@ import openCalls from '../data/open-calls.json';
             OceanGliders is an international programme. We aim to respond to all enquiries within 5 working days.
           </p>
         </div>
-      </div>
-
-      <!-- Open Calls -->
-      <div class="mt-12 mb-4 space-y-6">
-        {openCalls.map(call => (
-          <div class="bg-ocean-secondary rounded-xl p-6 text-white">
-            <p class="text-xs font-semibold uppercase tracking-widest text-white/70 mb-2">Open Call</p>
-            <h3 class="text-xl font-semibold mb-3">{call.title}</h3>
-            <p class="text-white/80 text-sm leading-relaxed mb-4">{call.description}</p>
-
-            {call.diversity && (
-              <p class="text-white/80 text-sm leading-relaxed mb-4">{call.diversity}</p>
-            )}
-
-            {call.contacts && (
-              <p class="text-white/70 text-sm mb-5">
-                Questions? Contact{' '}
-                {call.contacts.map((c, i) => (
-                  <>
-                    <a href={`mailto:${c.email}`} class="underline hover:text-white">{c.name}</a>
-                    {i < call.contacts.length - 2 ? ', ' : i === call.contacts.length - 2 ? ' or ' : ''}
-                  </>
-                ))}.
-              </p>
-            )}
-
-            {call.newTeams && (
-              <p class="text-white/80 text-sm leading-relaxed mb-2">
-                <span class="font-semibold text-white">{call.newTeams.label}:</span>{' '}
-                {call.newTeams.instruction}{' '}
-                <a href={`mailto:${call.newTeams.email}`} class="underline hover:text-white">{call.newTeams.email}</a>{' '}
-                by <span class="font-semibold text-white">{call.deadline}</span>.
-              </p>
-            )}
-
-            {call.existingTeams && (
-              <p class="text-white/80 text-sm leading-relaxed mb-5">
-                <span class="font-semibold text-white">{call.existingTeams.label}:</span>{' '}
-                {call.existingTeams.instruction.replace('the deadline above', call.deadline)}
-              </p>
-            )}
-
-            {!call.newTeams && (
-              <p class="text-white/70 text-sm mb-5">
-                Nominations close <span class="font-semibold text-white">{call.deadline}</span>.
-              </p>
-            )}
-
-            <a
-              href={call.buttonUrl}
-              target="_blank"
-              rel="noopener"
-              class="inline-flex items-center gap-2 bg-white text-ocean-secondary font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-white/90 transition-colors duration-200"
-            >
-              {call.buttonText}
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                <polyline points="15 3 21 3 21 9"/>
-                <line x1="10" y1="14" x2="21" y2="3"/>
-              </svg>
-            </a>
-          </div>
-        ))}
       </div>
 
     </div>
