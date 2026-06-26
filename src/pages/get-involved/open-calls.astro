@@ -1,0 +1,67 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Section from '@/components/Section.astro';
+import openCalls from '../../data/open-calls.json';
+
+const b = import.meta.env.BASE_URL;
+const base = b.endsWith('/') ? b : b + '/';
+---
+<Layout title="Open Calls" description="Current open calls for OceanGliders Steering Team and Task Teams.">
+  <div class="bg-ocean-primary text-white">
+    <div class="max-w-6xl mx-auto px-6 py-24">
+      <p class="section-subheading text-ocean-secondary">Get Involved</p>
+      <h1 class="text-4xl md:text-5xl font-semibold mb-4 leading-tight">Open Calls</h1>
+      <p class="text-white/70 text-lg max-w-xl leading-relaxed">
+        Current open calls for nominations, applications, and community participation.
+      </p>
+    </div>
+  </div>
+  <Section>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+      {openCalls.map(call => (
+        <div class="bg-ocean-secondary rounded-xl p-6 text-white flex flex-col">
+          <p class="text-xs font-semibold uppercase tracking-widest text-white/70 mb-2">Open Call</p>
+          <h3 class="text-xl font-semibold mb-3">{call.title}</h3>
+          {call.description.split('\n\n').map(para => (
+            <p class="text-white/80 text-base leading-relaxed mb-4">{para}</p>
+          ))}
+          {call.taskTeamsNote && (
+            <p class="text-white/80 text-base leading-relaxed mb-4">
+              Before applying, check the{' '}
+              <a href={`${base}organization/task-teams/`} class="underline hover:text-white">Task Teams page</a>
+              {' '}{call.taskTeamsNote}
+            </p>
+          )}
+          {call.diversity && (
+            <p class="text-white/80 text-base leading-relaxed mb-4">{call.diversity}</p>
+          )}
+          {call.contacts && (
+            <p class="text-white/70 text-base mb-5">
+              {call.questionsLabel ?? 'Questions?'} Contact{' '}
+              {call.contacts.map((c, i) => (
+                <>
+                  <a href={`mailto:${c.email}`} class="underline hover:text-white">{c.name}</a>
+                  {i < call.contacts.length - 2 ? ', ' : i === call.contacts.length - 2 ? ' or ' : ''}
+                </>
+              ))}.
+            </p>
+          )}
+          <p class="text-white/70 text-base mb-5">
+            Applications close <span class="font-semibold text-white">{call.deadline}</span>.
+          </p>
+          <div class="mt-auto pt-4">
+            <a href={call.buttonUrl} target="_blank" rel="noopener"
+              class="inline-flex items-center gap-2 bg-white text-ocean-secondary font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-white/90 transition-colors duration-200">
+              {call.buttonText}
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </Section>
+</Layout>

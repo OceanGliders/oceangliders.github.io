@@ -1,0 +1,30 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Section from '@/components/Section.astro';
+
+const b = import.meta.env.BASE_URL;
+const base = b.endsWith('/') ? b : b + '/';
+---
+<Layout title="Get Involved" description="Ways to contribute to OceanGliders — open calls and contact.">
+  <div class="bg-ocean-primary text-white">
+    <div class="max-w-6xl mx-auto px-6 py-24">
+      <p class="section-subheading text-ocean-secondary">Join the Network</p>
+      <h1 class="text-4xl md:text-5xl font-semibold mb-4 leading-tight">Get Involved</h1>
+      <p class="text-white/70 text-lg max-w-xl leading-relaxed">
+        Whether you operate gliders, analyse ocean data, or want to help shape the programme — there are several ways to contribute.
+      </p>
+    </div>
+  </div>
+  <Section>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <a href={`${base}get-involved/open-calls/`} class="bg-white rounded-xl shadow-md border border-ocean-light/30 p-8 hover:shadow-lg transition-shadow duration-200 group">
+        <h2 class="text-xl font-semibold text-ocean-primary mb-2 group-hover:text-ocean-secondary transition-colors">Open Calls</h2>
+        <p class="text-ocean-primary/60 text-sm leading-relaxed">Current open calls for Steering Team membership and Task Team applications.</p>
+      </a>
+      <a href={`${base}get-involved/contact/`} class="bg-white rounded-xl shadow-md border border-ocean-light/30 p-8 hover:shadow-lg transition-shadow duration-200 group">
+        <h2 class="text-xl font-semibold text-ocean-primary mb-2 group-hover:text-ocean-secondary transition-colors">Contact</h2>
+        <p class="text-ocean-primary/60 text-sm leading-relaxed">Get in touch with the right person for your question or collaboration.</p>
+      </a>
+    </div>
+  </Section>
+</Layout>
