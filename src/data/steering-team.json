@@ -67,6 +67,16 @@
     "bio": "Ilker is a Professor of physical oceanography at the Geophysical Institute, University of Bergen, Norway. His research covers ocean processes from meso- to small scales, with a focus on ocean mixing and turbulence. He leads the Norwegian National Facility for Ocean Gliders (NorGliders) and the Norwegian node for the European Multidisciplinary Seafloor and water column Observatory (NorEMSO)."
   },
   {
+    "name": "Estel Font",
+    "role": "OceanGliders Steering Team member",
+    "institution": "University of Cape Town / Southern Ocean Carbon and Climate Observatory, CSIR",
+    "country": "South Africa",
+    "email": "estel.fontifelez@uct.ac.za",
+    "imageUrl": "",
+    "imagePosition": "center 25%",
+    "bio": ""
+  },
+  {
     "name": "Emma Gardner",
     "role": "OceanGliders Data Team Lead",
     "institution": "NOC",
@@ -114,6 +124,16 @@
     "bio": "Charitha Pattiaratchi is a Professor in Coastal Oceanography at the University of Western Australia (UWA) where he is the leader of the Coastal Oceanography Group and The Integrated Marine Observing System (IMOS) ocean glider facility. His research encompasses coastal ocean physical processes and their influence on climatic, biological, and geological processes in estuaries, the nearshore (beach) zone, and the continental shelf region. He uses field measurements, remote sensing, and computer modelling for his research. Since 2008, his glider group has completed more than 440 successful glider missions around Australia"
   },
   {
+    "name": "Annunziata Pirro",
+    "role": "OceanGliders Steering Team member",
+    "institution": "Instituto Nazionale di Oceanografia e di Geofisica Sperimentale (OGS)",
+    "country": "Italy",
+    "email": "apirro@ogs.it",
+    "imageUrl": "",
+    "imagePosition": "center 25%",
+    "bio": ""
+  },
+  {
     "name": "Elisabeth Remy",
     "role": "OceanGliders Steering Team member",
     "institution": "Mercator Ocean International",
@@ -121,6 +141,16 @@
     "email": "eremy@mercator-ocean.fr",
     "imageUrl": "/images/steering-team/elisabeth.jpg",
     "bio": "Elisabeth is head of the Physical Ocean unit within the R&D department at Mercator Ocean International, France. Her expertise is in global ocean data assimilation, including coordination of European projects and collaborations with space agencies on the impact of ocean observations. She is a member of the OceanPredict Science team."
+  },
+  {
+    "name": "Clark Richards",
+    "role": "OceanGliders Steering Team member",
+    "institution": "Fisheries and Oceans Canada",
+    "country": "Canada",
+    "email": "clark.richards@dfo-mpo.gc.ca",
+    "imageUrl": "",
+    "imagePosition": "center 25%",
+    "bio": ""
   },
   {
     "name": "Callum Rollo",
@@ -133,6 +163,16 @@
     "bio": "Callum is responsible for data flow, processing, and quality at the Voice of the Ocean Foundation (VOTO), Sweden. His work focuses on glider data standardisation, including the OceanGliders data format, common standards, and controlled vocabularies. He has contributed to community open-source tools for glider data processing and dissemination, including pyglider, glidertest, and erddapy. He has been active in the European and global glider community for over 8 years."
   },
   {
+    "name": "Miguel Tenreiro",
+    "role": "OceanGliders Steering Team member",
+    "institution": "Centro de Investigación Cientifia y de Educación de Ensenada (CICESE)",
+    "country": "Mexico",
+    "email": "tenreiro@cicese.edu.mx",
+    "imageUrl": "",
+    "imagePosition": "center 25%",
+    "bio": ""
+  },
+  {
     "name": "Pierre Testor",
     "role": "OceanGliders Steering Team member",
     "institution": "LOCEAN-IPSL, CNRS/UPMC",
@@ -141,5 +181,15 @@
     "imageUrl": "/images/steering-team/PierreTestor.JPG",
     "imagePosition": "center 25%",
     "bio": "Pierre is a physical oceanographer at LOCEAN-IPSL, CNRS/UPMC, France, specialising in ocean currents, marine ecosystems, and global environmental change. He has led numerous sea expeditions, collecting and analysing oceanographic data. He is a pioneer in the use of underwater gliders for ocean observation. He contributes to research, publications, and doctoral supervision at CNRS."
+  },
+  {
+    "name": "Nikolaos Zarokanellos",
+    "role": "OceanGliders Steering Team member",
+    "institution": "SOCIB",
+    "country": "Spain",
+    "email": "",
+    "imageUrl": "",
+    "imagePosition": "center 25%",
+    "bio": ""
   }
 ]
